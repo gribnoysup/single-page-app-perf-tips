@@ -1,0 +1,17 @@
+.Footer {
+  padding: 8px 16px;
+  background-color: #0c0f0a;
+}
+
+.FooterParagraph {
+  margin: 8px 0;
+  padding: 0;
+
+  font-size: 12px;
+  text-align: center;
+}
+
+.FooterLink {
+  color: #ffffff;
+  text-decoration-color: #bcbdbc;
+}

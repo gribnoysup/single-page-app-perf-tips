@@ -1,0 +1,86 @@
+.LandingContent {
+  position: relative;
+  flex: 1 0 auto;
+
+  background-image: url(../assets/the-battle-of-waterloo.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.LandingContent:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  z-index: 0;
+}
+
+.LandingContainer {
+  position: relative;
+  padding: 0 24px;
+  margin: 0 auto;
+  max-width: 480px;
+
+  z-index: 1;
+}
+
+.TitleContainer {
+  font-size: 32px;
+  color: #ffffff;
+
+  margin: 0 -16px;
+  padding: 0 60px 60px;
+  text-align: center;
+
+  background-image: url(../assets/gold-frame.png);
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+@media (max-width: 420px) {
+  .TitleContainer {
+    padding: 0 48px 48px;
+  }
+}
+
+.Title {
+  margin: 0;
+  padding: 8px;
+  padding-bottom: 16px;
+  font-size: inherit;
+}
+
+.Pink {
+  color: #ff206e;
+}
+
+.Yellow {
+  color: #fbff12;
+}
+
+.Cyan {
+  color: #41ead4;
+}
+
+.Paragraph {
+  margin: 16px 0;
+  font-size: 18px;
+  text-indent: 1em;
+}
+
+.Paragraph:first-of-type {
+  margin-top: 32px;
+}
+
+.Paragraph:last-child {
+  margin-bottom: 32px;
+}
+
+.Link {
+  color: #ffffff;
+  text-decoration-color: #bcbdbc;
+}

@@ -1,0 +1,191 @@
+{
+  "elapsedMilliseconds": 226,
+  "artObject": {
+    "links": {
+      "search": "https://www.rijksmuseum.nl/api/nl/collection"
+    },
+    "id": "en-SK-A-1796",
+    "priref": "8604",
+    "objectNumber": "SK-A-1796",
+    "language": "en",
+    "title": "The Fête champêtre",
+    "copyrightHolder": null,
+    "webImage": {
+      "guid": "b712d938-3b1f-4851-bf85-0a941a18920e",
+      "offsetPercentageX": 47,
+      "offsetPercentageY": 98,
+      "width": 2946,
+      "height": 1656,
+      "url":
+        "http://lh3.googleusercontent.com/2kjBth_lI3Wir9x_rKl95XRj0BUIiGUm-DmesBhAW3IXoHwfRR3uECU3TF9gR4nUhV9C34vW3yodSi_4GrSyBJTd5Q=s0"
+    },
+    "colors": [
+      "#768388",
+      " #656D60",
+      " #382C24",
+      " #5F4B35",
+      " #A59A80",
+      " #91633D"
+    ],
+    "colorsWithNormalization": [
+      {
+        "originalHex": "#768388",
+        "normalizedHex": "#737C84"
+      },
+      {
+        "originalHex": " #656D60",
+        "normalizedHex": "#737C84"
+      },
+      {
+        "originalHex": " #382C24",
+        "normalizedHex": "#000000"
+      },
+      {
+        "originalHex": " #5F4B35",
+        "normalizedHex": "#B35A1F"
+      },
+      {
+        "originalHex": " #A59A80",
+        "normalizedHex": "#E0CC91"
+      },
+      {
+        "originalHex": " #91633D",
+        "normalizedHex": "#B35A1F"
+      }
+    ],
+    "normalizedColors": [
+      "#000000",
+      " #D2B48C",
+      " #696969",
+      " #708090",
+      " #A0522D"
+    ],
+    "normalized32Colors": ["#000000", " #E0CC91", " #737C84", " #B35A1F"],
+    "titles": ["The Fête Champêtre"],
+    "description":
+      "De buitenpartij. Een vrolijk gezelschap in de tuin van een landhuis. Links en rechts twee elegante staande paren. Links een groepje muzikanten, in het midden een grote gedekte tafel waar gegeten en gedronken wordt. Rechts op de voorgrond een grote koeler met flessen wijn. Voor de tafel zitten een geketende aap en verschillende honden. Links op een voetstuk een papegaai en een pauw.",
+    "labelText": null,
+    "objectTypes": ["painting"],
+    "objectCollection": ["paintings"],
+    "makers": [],
+    "principalMakers": [
+      {
+        "name": "Dirck Hals",
+        "unFixedName": "Hals, Dirck",
+        "placeOfBirth": "Haarlem",
+        "dateOfBirth": "1591-03-19",
+        "dateOfBirthPrecision": null,
+        "dateOfDeath": "1656-05-17",
+        "dateOfDeathPrecision": null,
+        "placeOfDeath": null,
+        "occupation": ["draughtsman", "painter"],
+        "roles": ["painter"],
+        "nationality": null,
+        "biography": null,
+        "productionPlaces": [],
+        "qualification": null
+      }
+    ],
+    "plaqueDescriptionDutch":
+      "Dirck Hals schilderde voornamelijk vrolijke gezelschappen, waarin hij vaak onopvallend een moralistische boodschap verwerkte.\r\nIn dit schilderij - een op het oog frivole partij - verbeeldt het geketende aapje op de voorgrond de mens die in zonde leeft en zich daarvan niet kan losmaken. Zo wordt de kijker vermaand om niet losbandig te worden. ",
+    "plaqueDescriptionEnglish":
+      "Dirck Hals mostly painted people enjoying themselves, yet often included a moral message.\r\nIn this painting of an ostensibly frivolous party, the chained monkey in the foreground represents man living in sin and unable to free himself. It is an admonition to the viewer to avoid licentious behaviour. ",
+    "principalMaker": "Dirck Hals",
+    "artistRole": null,
+    "associations": [],
+    "acquisition": {
+      "method": null,
+      "date": "1899-05-01T00:00:00Z",
+      "creditLine": null
+    },
+    "exhibitions": [],
+    "materials": ["panel", "oil paint (paint)"],
+    "techniques": [],
+    "productionPlaces": [],
+    "dating": {
+      "presentingDate": "1627",
+      "sortingDate": 1627,
+      "period": 17
+    },
+    "classification": {
+      "iconClassIdentifier": [
+        "41CC51",
+        "41A161",
+        "48C753",
+        "25F22",
+        "33C23",
+        "41C317"
+      ],
+      "iconClassDescription": [
+        "banquet of elegant company - CC - out of doors",
+        "country-house",
+        "more than one musician with instrument",
+        "monkeys, apes",
+        "couple of lovers",
+        "wine-cooler"
+      ],
+      "motifs": [],
+      "events": [],
+      "periods": [],
+      "places": [],
+      "people": [],
+      "objectNumbers": ["SK-A-1796"]
+    },
+    "hasImage": true,
+    "historicalPersons": [],
+    "inscriptions": [],
+    "documentation": [
+      "Rijksmuseum Kunstkrant, Jaargang 33 (sept.-okt. 2007), nr. 5, p. 10"
+    ],
+    "catRefRPK": [],
+    "principalOrFirstMaker": "Dirck Hals",
+    "dimensions": [
+      {
+        "unit": "cm",
+        "type": "height",
+        "part": null,
+        "value": "77.6"
+      },
+      {
+        "unit": "cm",
+        "type": "width",
+        "part": null,
+        "value": "135.7"
+      }
+    ],
+    "physicalProperties": [],
+    "physicalMedium": "oil on panel",
+    "longTitle": "The Fête champêtre, Dirck Hals, 1627",
+    "subTitle": "h 77.6cm × w 135.7cm",
+    "scLabelLine": "Dirck Hals (1591–1656), oil on panel, 1627",
+    "label": {
+      "title": "The Fête champêtre",
+      "makerLine": "Dirck Hals (1591–1656), oil on panel, 1627",
+      "description":
+        "The 17th-century public would have delighted in this amusing spectacle. At the same time, viewers would\nhave been aware of its hidden message: there is more to life on earth than eating, drinking and merrymaking.\nA telling detail is the chained monkey: it stands for sinful man, who allows himself to be fettered by his base instincts.",
+      "notes": null,
+      "date": "2013-04-08"
+    },
+    "showImage": true,
+    "location": "HG-2.6"
+  },
+  "artObjectPage": {
+    "id": "en-SK-A-1796",
+    "similarPages": [],
+    "lang": "en",
+    "objectNumber": "SK-A-1796",
+    "tags": [],
+    "plaqueDescription":
+      "Dirck Hals mostly painted people enjoying themselves, yet often included a moral message.\r\nIn this painting of an ostensibly frivolous party, the chained monkey in the foreground represents man living in sin and unable to free himself. It is an admonition to the viewer to avoid licentious behaviour. ",
+    "audioFile1": null,
+    "audioFileLabel1": null,
+    "audioFileLabel2": null,
+    "createdOn": "0001-01-01T00:00:00Z",
+    "updatedOn": "2012-09-18T14:06:34.1923439Z",
+    "adlibOverrides": {
+      "titel": null,
+      "maker": null,
+      "etiketText": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.Product {
+  flex: 1;
+}
+
+.Image {
+  display: flex;
+  align-items: flex-end;
+
+  height: 384px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Heading {
+  flex: 1;
+  padding: 8px;
+  color: #ffffff;
+  background-color: rgba(12, 15, 10, 0.4);
+}
+
+.Title,
+.Subtitle {
+  margin: 4px 0;
+}
+
+.Title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.Button {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.Subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.Details {
+  padding: 16px;
+}
+
+.Paragraph {
+  margin: 16px 0;
+}

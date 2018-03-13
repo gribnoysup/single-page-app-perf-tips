@@ -1,0 +1,89 @@
+.Cart {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+
+  /* text-overflow inside flex-child fix */
+  /* more info: https://css-tricks.com/flexbox-truncated-text/ */
+  min-width: 0;
+}
+
+.List {
+  margin: 0;
+  padding: 0;
+}
+
+.ListItem {
+  display: flex;
+  align-items: stretch;
+
+  min-height: 64px;
+
+  list-style: none;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ItemTitleGroup {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  color: #ffffff;
+  background-color: rgba(12, 15, 10, 0.4);
+
+  padding: 16px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  /* text-overflow inside flex-child fix */
+  /* more info: https://css-tricks.com/flexbox-truncated-text/ */
+  min-width: 0;
+}
+
+.ListItemTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ListItemCount {
+  margin-left: auto;
+  min-width: 48px;
+  text-align: right;
+}
+
+.Paragraph {
+  margin: 0;
+  margin-top: 16px;
+  padding: 0 16px;
+}
+
+.Paragraph:not(:first-child) {
+  margin: 16px 0;
+}
+
+.ParagraphCentered {
+  text-align: center;
+}
+
+.Link {
+  color: #ffffff;
+  text-decoration-color: #bcbdbc;
+}
+
+.ButtonGroup {
+  flex: none;
+  margin-top: auto;
+}
+
+.Button {
+  flex: 1 1 50%;
+
+  font-size: 20px;
+  font-weight: 600;
+}

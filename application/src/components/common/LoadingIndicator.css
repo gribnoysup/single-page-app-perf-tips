@@ -1,0 +1,12 @@
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+
+.Spinner {
+  width: 128px;
+  height: 128px;
+}

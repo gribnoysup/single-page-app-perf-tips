@@ -1,0 +1,199 @@
+{
+  "elapsedMilliseconds": 247,
+  "artObject": {
+    "links": {
+      "search": "https://www.rijksmuseum.nl/api/nl/collection"
+    },
+    "id": "en-SK-A-500",
+    "priref": "6831",
+    "objectNumber": "SK-A-500",
+    "language": "en",
+    "title": "The Holy Kinship",
+    "copyrightHolder": null,
+    "webImage": {
+      "guid": "fe12a6fa-fda9-47ee-99da-50a2b12c0abb",
+      "offsetPercentageX": 50,
+      "offsetPercentageY": 50,
+      "width": 2040,
+      "height": 2658,
+      "url":
+        "http://lh3.googleusercontent.com/qjkiSAC89H2lvsgogjCe6WGLzMFNgdoCLHwRngvUX6BACTFTggkzIXE99tz9Em-hTf44MS9YeRsxCjDkW7tfC9lprw=s0"
+    },
+    "colors": [
+      "#323224",
+      " #A39380",
+      " #6E4C37",
+      " #947958",
+      " #BDB9AA",
+      " #15140D",
+      " #5C201E"
+    ],
+    "colorsWithNormalization": [
+      {
+        "originalHex": "#323224",
+        "normalizedHex": "#2F4F4F"
+      },
+      {
+        "originalHex": " #A39380",
+        "normalizedHex": "#E0CC91"
+      },
+      {
+        "originalHex": " #6E4C37",
+        "normalizedHex": "#B35A1F"
+      },
+      {
+        "originalHex": " #947958",
+        "normalizedHex": "#B35A1F"
+      },
+      {
+        "originalHex": " #BDB9AA",
+        "normalizedHex": "#FBF6E1"
+      },
+      {
+        "originalHex": " #15140D",
+        "normalizedHex": "#000000"
+      },
+      {
+        "originalHex": " #5C201E",
+        "normalizedHex": "#981313"
+      }
+    ],
+    "normalizedColors": [
+      "#696969",
+      " #D2B48C",
+      " #8B4513",
+      " #C0C0C0",
+      " #000000",
+      " #800000"
+    ],
+    "normalized32Colors": [
+      "#2F4F4F",
+      " #B35A1F",
+      " #E0CC91",
+      " #FBF6E1",
+      " #000000",
+      " #981313"
+    ],
+    "titles": ["The Holy Kinship"],
+    "description":
+      "Kerkinterieur met de heilige maagschap, allen verwanten van Christus. Links de heilige Anna, naast haar Maria met het Christuskind. Achter hen staan Joachim en Jozef. Rechts Elisabeth met Johannes de Doper als kind, hierbij ook Maria Salome en Maria Cleophas. Bij het altaar staan Alpheüs, Zebedeüs en Zacharias. Voor het altaar spelen de discipelen, nog als kinderen, Simon, Jacobus en Johannes. Voor het altaar steekt Judas Thaddeüs een kaars op de koorafsluiting aan. Op het altaar staat een beeldengroep van het offer van Abraham.",
+    "labelText": null,
+    "objectTypes": ["painting"],
+    "objectCollection": ["paintings"],
+    "makers": [],
+    "principalMakers": [
+      {
+        "name": "Geertgen tot Sint Jans",
+        "unFixedName": "Geertgen tot Sint Jans",
+        "placeOfBirth": "Leiden",
+        "dateOfBirth": "1465",
+        "dateOfBirthPrecision": "c.",
+        "dateOfDeath": "1495",
+        "dateOfDeathPrecision": "c.",
+        "placeOfDeath": "Haarlem",
+        "occupation": ["painter"],
+        "roles": ["painter"],
+        "nationality": null,
+        "biography": null,
+        "productionPlaces": [],
+        "qualification": "workshop of"
+      }
+    ],
+    "plaqueDescriptionDutch":
+      "In dit fictieve, middeleeuwse kerkgebouw is Christus’ naaste familie bijeen, de heilige maagschap, naar het oud-Nederlandse woord ‘maag’ voor bloedverwantschap. \r\nLinks, in een blauw gewaad, zit Maria met Jezus en naast zich haar moeder Anna. Daarachter staan hun echtgenoten Jozef en Joachim. Rechts zit Maria’s nicht Elisabeth met haar zoon Johannes de Doper. ",
+    "plaqueDescriptionEnglish":
+      "Christ’s family is gathered together in this fictional medieval church: the Holy Family, known in Dutch as the holy ‘maagschap’, an old word for kinship. \r\nLeft, in a blue robe, the Virgin Mary is seated with Jesus, and alongside, her mother Anna. Behind are the two husbands: Joseph and Joachim. Seated on the right is Mary’s cousin, Elisabeth, with her son, John the Baptist.",
+    "principalMaker": "Geertgen tot Sint Jans",
+    "artistRole": null,
+    "associations": [],
+    "acquisition": {
+      "method": null,
+      "date": "1808-01-01T00:00:00Z",
+      "creditLine": null
+    },
+    "exhibitions": [],
+    "materials": ["oak (wood)", "oil paint (paint)"],
+    "techniques": [],
+    "productionPlaces": [],
+    "dating": {
+      "presentingDate": "c. 1495",
+      "sortingDate": 1495,
+      "period": 15
+    },
+    "classification": {
+      "iconClassIdentifier": ["73A222", "11Q713", "48C24", "71C1313"],
+      "iconClassDescription": [
+        "extended representations of 'Anna selbdritt' (Joseph and Joachim, three husbands, three daughters with seven children)",
+        "interior of church",
+        "piece of sculpture, reproduction of a piece of sculpture",
+        "Abraham picks up the knife to kill Isaac"
+      ],
+      "motifs": [],
+      "events": [],
+      "periods": [],
+      "places": [],
+      "people": [],
+      "objectNumbers": ["SK-A-500"]
+    },
+    "hasImage": true,
+    "historicalPersons": [],
+    "inscriptions": [],
+    "documentation": [
+      "Toon Vugts, 'Collectie : Antoine Bodar over moeder Maria', De Rijksmuseum Kunstkrant 33 (2007) nr. 2, p. 9 (afb.).",
+      "Judikje Kiers, 'Geertgen gerestaureerd', De Rijksmuseum Kunstkrant 27 (2001) nr. 1, p. 12-13."
+    ],
+    "catRefRPK": [],
+    "principalOrFirstMaker": "Geertgen tot Sint Jans",
+    "dimensions": [
+      {
+        "unit": "cm",
+        "type": "height",
+        "part": null,
+        "value": "137.2"
+      },
+      {
+        "unit": "cm",
+        "type": "width",
+        "part": null,
+        "value": "105.8"
+      }
+    ],
+    "physicalProperties": [],
+    "physicalMedium": "oil on panel",
+    "longTitle":
+      "The Holy Kinship, Geertgen tot Sint Jans (workshop of), c. 1495",
+    "subTitle": "h 137.2cm × w 105.8cm",
+    "scLabelLine":
+      "workshop of  Geertgen tot Sint-Jans (c. 1455/65-1485/95), Haarlem, c. 1495, oil on panel",
+    "label": {
+      "title": "The Holy Kinship",
+      "makerLine":
+        "workshop of  Geertgen tot Sint-Jans (c. 1455/65-1485/95), Haarlem, c. 1495, oil on panel",
+      "description":
+        "Christ’s next of kin are gathered in an imaginary medieval church. The term for such a scene derives from the word for a blood relation. At left, the Virgin (in blue) is seated with Jesus on her lap beside her mother, Anne. Behind them stand their husbands, Joachim and Joseph. At right sits Mary’s cousin Elizabeth with her son, John the Baptist.",
+      "notes": null,
+      "date": "2012-11-20"
+    },
+    "showImage": true,
+    "location": "HG-0.1"
+  },
+  "artObjectPage": {
+    "id": "en-SK-A-500",
+    "similarPages": [],
+    "lang": "en",
+    "objectNumber": "SK-A-500",
+    "tags": [],
+    "plaqueDescription":
+      "Christ’s family is gathered together in this fictional medieval church: the Holy Family, known in Dutch as the holy ‘maagschap’, an old word for kinship. \r\nLeft, in a blue robe, the Virgin Mary is seated with Jesus, and alongside, her mother Anna. Behind are the two husbands: Joseph and Joachim. Seated on the right is Mary’s cousin, Elisabeth, with her son, John the Baptist.",
+    "audioFile1": null,
+    "audioFileLabel1": null,
+    "audioFileLabel2": null,
+    "createdOn": "2012-08-09T13:43:08.1134147Z",
+    "updatedOn": "2012-09-18T14:06:01.149136Z",
+    "adlibOverrides": {
+      "titel": null,
+      "maker": null,
+      "etiketText": null
+    }
+  }
+}

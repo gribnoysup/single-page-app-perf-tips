@@ -1,0 +1,1358 @@
+{
+  "elapsedMilliseconds": 0,
+  "count": 4327,
+  "countFacets": {
+    "hasimage": 4327,
+    "ondisplay": 712
+  },
+  "artObjects": [
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-1796",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-1796"
+      },
+      "id": "en-SK-A-1796",
+      "objectNumber": "SK-A-1796",
+      "title": "The Fête champêtre",
+      "hasImage": true,
+      "principalOrFirstMaker": "Dirck Hals",
+      "longTitle": "The Fête champêtre, Dirck Hals, 1627",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "b712d938-3b1f-4851-bf85-0a941a18920e",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 1,
+        "width": 1656,
+        "height": 1656,
+        "url":
+          "https://lh3.googleusercontent.com/2kjBth_lI3Wir9x_rKl95XRj0BUIiGUm-DmesBhAW3IXoHwfRR3uECU3TF9gR4nUhV9C34vW3yodSi_4GrSyBJTd5Q"
+      },
+      "headerImage": {
+        "guid": "2e6ea4f4-6c98-44fc-b9ba-ee3bae2d7c3b",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/weBy4-m2p1yBWPt_yMgPzgyC-r-2tqO8IAbZqU1C29u2Q_UPcxZfPM2mS5DGUYjKNXG0d4L9HecAG5RCrbcrwGT6baoU"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-C-2",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-C-2"
+      },
+      "id": "en-SK-C-2",
+      "objectNumber": "SK-C-2",
+      "title":
+        "Banquet at the Crossbowmen’s Guild in Celebration of the Treaty of Münster",
+      "hasImage": true,
+      "principalOrFirstMaker": "Bartholomeus van der Helst",
+      "longTitle":
+        "Banquet at the Crossbowmen’s Guild in Celebration of the Treaty of Münster, Bartholomeus van der Helst, 1648",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "68df1929-68ba-4d9a-becc-e60289f7a7ef",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 1034,
+        "height": 1034,
+        "url":
+          "https://lh3.googleusercontent.com/kmCDKP1kMN72zB-7CHBOBdCnyU3Z-NW7WIzuN_sIqm5n9xf6lG4oTtfcWsGW8qhbVYuwSDkYlhOglx7z4YaFL8UeFWU"
+      },
+      "headerImage": {
+        "guid": "9dc69178-c089-420e-8181-6cd662c82a2c",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/3taYbbzj47-gP_5Kj8gVtgDN2MzPHyGFRY3cYfIY_HCLub8Y-NpLI1oqNK7h-8uS4sMJgK2eihEt5WK1Hy-izt9QiJ4"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-3148",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-3148"
+      },
+      "id": "en-SK-A-3148",
+      "objectNumber": "SK-A-3148",
+      "title": "William I, Prince of Oranje",
+      "hasImage": true,
+      "principalOrFirstMaker": "Adriaen Thomasz. Key",
+      "longTitle": "William I, Prince of Oranje, Adriaen Thomasz. Key, c. 1579",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "b7a50951-55b0-4d31-94d7-df21fc41940b",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 2500,
+        "height": 2500,
+        "url":
+          "https://lh3.googleusercontent.com/_BGOU2j67VwLEzkwwGvykBeqM-AgXmGcnQ1KOHVE_VcWJ8g6MqPXXTJ-P-is99ojsMggoe5tQnwsMrYdg7Y0ae6YNLU"
+      },
+      "headerImage": {
+        "guid": "f820dbdc-0a72-4e4b-8ec6-b9d515a4902d",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 435,
+        "height": 435,
+        "url":
+          "https://lh3.googleusercontent.com/76GOj1BwTODm6ucuTUPwQv7X-Xk8N_jYjwPPnae_u-zrhwr98yja4Z1UiXQ2-euB2KUOVdpYIvia0jNNmICD-RVQQjM"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-2382",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-2382"
+      },
+      "id": "en-SK-A-2382",
+      "objectNumber": "SK-A-2382",
+      "title": "Children of the Sea",
+      "hasImage": true,
+      "principalOrFirstMaker": "Jozef Israëls",
+      "longTitle": "Children of the Sea, Jozef Israëls, 1872",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "eb216c2a-7871-4cf3-949b-56df25d3db82",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 1483,
+        "height": 1483,
+        "url":
+          "https://lh3.googleusercontent.com/BMvxPb9RF9F-qz68PAIIrROTp7G352oNEzZWmmT-H1YXSgf2Id33oQBssFYnPL52KwiyFgYY1pSInpEVrhrx1OViFQ"
+      },
+      "headerImage": {
+        "guid": "ac7d52c2-facc-49b2-b55f-9deea1b2e3a8",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/UFZJ1iyf6N7eVckH5XEbXtowoHqnBp5c4uGPRQ4BxBTCzqTILHCJ0N70hRDrM2QogBIldQ_MQBqaLRFSyXI-k3udNZuY"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-3059",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-3059"
+      },
+      "id": "en-SK-A-3059",
+      "objectNumber": "SK-A-3059",
+      "title": "The Sick Child",
+      "hasImage": true,
+      "principalOrFirstMaker": "Gabriël Metsu",
+      "longTitle": "The Sick Child, Gabriël Metsu, c. 1664 - c. 1666",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "2dd9705f-bdf0-4304-a8f7-02589edf81d6",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 2636,
+        "height": 2636,
+        "url":
+          "https://lh3.googleusercontent.com/SCp0xV3Rwxh3ipnuSnbEQR_uGrHlsvHXlLD-5kVSjAE7WPWiribDB77_LcJETu4EydCC_jMuhsgjz4maHzY_t-xeiw"
+      },
+      "headerImage": {
+        "guid": "fca95581-cccc-4adf-9104-ad16f2908329",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/DPf2gg2g_QYo5j3G2fAXzCC_li5wvQ50VPlciWc6-9VbVmYiQdLL1klUg98u0Pnxbpc3eQIbR1L7t5Dw7bLY7nKtRNQ"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-175",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-175"
+      },
+      "id": "en-SK-A-175",
+      "objectNumber": "SK-A-175",
+      "title":
+        "A Pelican and other Birds near a Pool, Known as ‘The Floating Feather’",
+      "hasImage": true,
+      "principalOrFirstMaker": "Melchior d'Hondecoeter",
+      "longTitle":
+        "A Pelican and other Birds near a Pool, Known as ‘The Floating Feather’, Melchior d'Hondecoeter, c. 1680",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "6753e473-6fea-4c5c-8014-454ba4c393ec",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 2640,
+        "height": 2640,
+        "url":
+          "https://lh3.googleusercontent.com/3UIOtn2DLhEC4W92V0_pIdChloiYyzpXvehK0BYaM3NHJR5zWhcA7uXlcNX_mCAt9xBh3gaHo3pDuriYzYm3uEDbeUEr"
+      },
+      "headerImage": {
+        "guid": "c3a7ea42-4186-45d4-bdab-4a0b4315a91a",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/eCpzK6ikH0uo2ntqgYX0cg49M9lInJk8I3jrWt8xJszJoDfrqz5L4N3xRaWPA4X6CHn6G8xfGc1seAK-16I8oKdRTa58"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-4100",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-4100"
+      },
+      "id": "en-SK-A-4100",
+      "objectNumber": "SK-A-4100",
+      "title": "The Art Gallery of Jan Gildemeester Jansz",
+      "hasImage": true,
+      "principalOrFirstMaker": "Adriaan de Lelie",
+      "longTitle":
+        "The Art Gallery of Jan Gildemeester Jansz, Adriaan de Lelie, 1794 - 1795",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "c3a05f6b-4b71-4cfd-ab8d-3c7d79e08ea1",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 1,
+        "width": 1865,
+        "height": 1865,
+        "url":
+          "https://lh3.googleusercontent.com/vkoS9jmZLZWuWH1LNIG3eJUVI6W7XqOUKmFf_lcuB4m1nJydWPXZGggi3XGwmirNj1wLdiO7sH6x5fJ60XJnH2expg"
+      },
+      "headerImage": {
+        "guid": "36b54f3a-46a6-4c24-b804-ce2b5b86f45a",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/YjKvOkkf3epcceNunYHLeCrDFYNfADyeWnx_TkKyF1tzWPhotNzQaLztgeyfujmhgLG1LSBUv_oOtGL0bTWmgYxBEw"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-500",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-500"
+      },
+      "id": "en-SK-A-500",
+      "objectNumber": "SK-A-500",
+      "title": "The Holy Kinship",
+      "hasImage": true,
+      "principalOrFirstMaker": "Geertgen tot Sint Jans",
+      "longTitle":
+        "The Holy Kinship, Geertgen tot Sint Jans (workshop of), c. 1495",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "fe12a6fa-fda9-47ee-99da-50a2b12c0abb",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 2658,
+        "height": 2658,
+        "url":
+          "https://lh3.googleusercontent.com/qjkiSAC89H2lvsgogjCe6WGLzMFNgdoCLHwRngvUX6BACTFTggkzIXE99tz9Em-hTf44MS9YeRsxCjDkW7tfC9lprw"
+      },
+      "headerImage": {
+        "guid": "fe1b786d-943d-4bd8-9dc1-1559ffa45343",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/lktwooJWkHdMdbDh8RiQrGuMBh2QojMAVgbwMHs7ebBxe6XPgj-RFMAplaffrb9jfvaRUcYy3JucDArwqHf1HnO3QA"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-1718",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-1718"
+      },
+      "id": "en-SK-A-1718",
+      "objectNumber": "SK-A-1718",
+      "title": "Winter Landscape with Ice Skaters",
+      "hasImage": true,
+      "principalOrFirstMaker": "Hendrick Avercamp",
+      "longTitle":
+        "Winter Landscape with Ice Skaters, Hendrick Avercamp, c. 1608",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "1332eb29-16f1-4e90-b60e-7786b7c24166",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 1691,
+        "height": 1691,
+        "url":
+          "https://lh3.googleusercontent.com/LW9vbQVQVGCgWznrQnEXKli4lRYmVFiUdEygCni9jDN2zXhXH4IpsgSD2aROfNoItYBCCzBv08REKrwQdUj3GqO3vdqj"
+      },
+      "headerImage": {
+        "guid": "c3d4cbca-a7c2-4341-812d-78773acdcb6f",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/nvNlNnIQ8vH1KICxmce4GDwUYbjtx7s9_ew7jhCN4IhL2h7R3EI6Jtzl6h-bFDR_bKj6t2spn0ypGY1mVuk7HjYiKvU"
+      },
+      "productionPlaces": []
+    },
+    {
+      "links": {
+        "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-4",
+        "web": "https://www.rijksmuseum.nl/en/collection/SK-A-4"
+      },
+      "id": "en-SK-A-4",
+      "objectNumber": "SK-A-4",
+      "title": "The Threatened Swan",
+      "hasImage": true,
+      "principalOrFirstMaker": "Jan Asselijn",
+      "longTitle": "The Threatened Swan, Jan Asselijn, c. 1650",
+      "showImage": false,
+      "permitDownload": false,
+      "webImage": {
+        "guid": "2f3951aa-bbde-4e10-bbf8-0fcb2c0ed08a",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 2459,
+        "height": 2459,
+        "url":
+          "https://lh3.googleusercontent.com/tm1DbZrAP0uBM-OJhLwvKir1Le5LglRF_bvbaNi6m-F_pIyttsWQz040soRY9pWA9PgNEYFA_fBkg_keYixRXCAjz9Q"
+      },
+      "headerImage": {
+        "guid": "8fb60afb-0fb2-496f-ab33-921077fc13df",
+        "offsetPercentageX": 0,
+        "offsetPercentageY": 0,
+        "width": 460,
+        "height": 460,
+        "url":
+          "https://lh3.googleusercontent.com/YwB03AMldxZhUOsLJYjKEfz5L15-WpbyvdFVctMbysr8McUY8rePhcgpIU7mJft7SOSqknEjbx55I6LnS2LC13peFUwk"
+      },
+      "productionPlaces": []
+    }
+  ],
+  "facets": [
+    {
+      "facets": [
+        {
+          "key": "anonymous",
+          "value": 391
+        },
+        {
+          "key": "Jean Baptiste Vanmour",
+          "value": 61
+        },
+        {
+          "key": "George Hendrik Breitner",
+          "value": 52
+        },
+        {
+          "key": "Arnoud van Halen",
+          "value": 46
+        },
+        {
+          "key": "Jacob Maris",
+          "value": 40
+        },
+        {
+          "key": "Jan Maurits Quinkhard",
+          "value": 38
+        },
+        {
+          "key": "Michiel Jansz van Mierevelt",
+          "value": 37
+        },
+        {
+          "key": "Pieter van der Werff",
+          "value": 33
+        },
+        {
+          "key": "Jan Antonisz van Ravesteyn",
+          "value": 31
+        },
+        {
+          "key": "Rembrandt van Rijn",
+          "value": 31
+        },
+        {
+          "key": "Caspar Netscher",
+          "value": 24
+        },
+        {
+          "key": "Cornelis Troost",
+          "value": 24
+        },
+        {
+          "key": "Ferdinand Bol",
+          "value": 24
+        },
+        {
+          "key": "Jan Havicksz. Steen",
+          "value": 24
+        },
+        {
+          "key": "Jozef Israëls",
+          "value": 24
+        },
+        {
+          "key": "Jurriaan Andriessen",
+          "value": 21
+        },
+        {
+          "key": "Gerard van Honthorst",
+          "value": 20
+        },
+        {
+          "key": "Jan Willem Pieneman",
+          "value": 19
+        },
+        {
+          "key": "Ludolf Bakhuysen",
+          "value": 19
+        },
+        {
+          "key": "Adriaen Pietersz. van de Venne",
+          "value": 18
+        },
+        {
+          "key": "Anton Mauve",
+          "value": 18
+        },
+        {
+          "key": "Gerard de Lairesse",
+          "value": 18
+        },
+        {
+          "key": "Adriaan de Lelie",
+          "value": 17
+        },
+        {
+          "key": "Nicolaes Maes",
+          "value": 17
+        },
+        {
+          "key": "Richard Roland Holst",
+          "value": 17
+        },
+        {
+          "key": "Charles Howard Hodges",
+          "value": 16
+        },
+        {
+          "key": "Nicolaas Pieneman",
+          "value": 16
+        },
+        {
+          "key": "Willem van de Velde (II)",
+          "value": 16
+        },
+        {
+          "key": "Anthony van Dyck",
+          "value": 15
+        },
+        {
+          "key": "Gerard ter Borch (II)",
+          "value": 15
+        },
+        {
+          "key": "Melchior d'Hondecoeter",
+          "value": 15
+        },
+        {
+          "key": "Philips Wouwerman",
+          "value": 15
+        },
+        {
+          "key": "Willem van de Velde (I)",
+          "value": 15
+        },
+        {
+          "key": "Adriaen van Ostade",
+          "value": 14
+        },
+        {
+          "key": "Cornelis Kruseman",
+          "value": 14
+        },
+        {
+          "key": "Jan van Goyen",
+          "value": 14
+        },
+        {
+          "key": "Nicolaes Pietersz. Berchem",
+          "value": 14
+        },
+        {
+          "key": "Isaac Israels",
+          "value": 13
+        },
+        {
+          "key": "Jacob Isaacksz. van Ruisdael",
+          "value": 13
+        },
+        {
+          "key": "Master of Alkmaar",
+          "value": 13
+        },
+        {
+          "key": "Otto van Veen",
+          "value": 13
+        },
+        {
+          "key": "Pieter Gerardus van Os",
+          "value": 13
+        },
+        {
+          "key": "Willem de Zwart",
+          "value": 13
+        },
+        {
+          "key": "Wybrand de Geest (I)",
+          "value": 13
+        },
+        {
+          "key": "Bartholomeus van der Helst",
+          "value": 12
+        },
+        {
+          "key": "Jacob de Wit",
+          "value": 12
+        },
+        {
+          "key": "Jan van Scorel",
+          "value": 12
+        },
+        {
+          "key": "Johan Heinrich Neuman",
+          "value": 12
+        },
+        {
+          "key": "Johan Hendrik Weissenbruch",
+          "value": 12
+        },
+        {
+          "key": "Johannes Lingelbach",
+          "value": 12
+        },
+        {
+          "key": "Matthijs Maris",
+          "value": 12
+        },
+        {
+          "key": "Willem Maris",
+          "value": 12
+        },
+        {
+          "key": "Willem Roelofs (I)",
+          "value": 12
+        },
+        {
+          "key": "Adriaen van der Werff",
+          "value": 11
+        },
+        {
+          "key": "Aert van der Neer",
+          "value": 11
+        },
+        {
+          "key": "Frans Hals",
+          "value": 11
+        },
+        {
+          "key": "Gerard Dou",
+          "value": 11
+        },
+        {
+          "key": "Johannes Bosboom",
+          "value": 11
+        },
+        {
+          "key": "Karel Dujardin",
+          "value": 11
+        },
+        {
+          "key": "Maarten van Heemskerck",
+          "value": 11
+        },
+        {
+          "key": "Aelbert Cuyp",
+          "value": 10
+        },
+        {
+          "key": "Dirck van Delen",
+          "value": 10
+        },
+        {
+          "key": "Godfried Schalcken",
+          "value": 10
+        },
+        {
+          "key": "Govert Flinck",
+          "value": 10
+        },
+        {
+          "key": "Jan Adam Kruseman",
+          "value": 10
+        },
+        {
+          "key": "Jan Kamphuijsen",
+          "value": 10
+        },
+        {
+          "key": "Louis Moritz",
+          "value": 10
+        },
+        {
+          "key": "Michiel van Musscher",
+          "value": 10
+        },
+        {
+          "key": "Paul Joseph Constantin Gabriël",
+          "value": 10
+        },
+        {
+          "key": "Pauwels van Hillegaert",
+          "value": 10
+        },
+        {
+          "key": "Willem Witsen",
+          "value": 10
+        },
+        {
+          "key": "Arnold Boonen",
+          "value": 9
+        },
+        {
+          "key": "August Allebé",
+          "value": 9
+        },
+        {
+          "key": "Eduard Karsen",
+          "value": 9
+        },
+        {
+          "key": "Frans Jansz Post",
+          "value": 9
+        },
+        {
+          "key": "Geo Poggenbeek",
+          "value": 9
+        },
+        {
+          "key": "Gortzius Geldorp",
+          "value": 9
+        },
+        {
+          "key": "Jacob van Campen",
+          "value": 9
+        },
+        {
+          "key": "Jan Mijtens",
+          "value": 9
+        },
+        {
+          "key": "Jan Wijnants",
+          "value": 9
+        },
+        {
+          "key": "Michael Sweerts",
+          "value": 9
+        },
+        {
+          "key": "Paulus Moreelse",
+          "value": 9
+        },
+        {
+          "key": "Peter Paul Rubens",
+          "value": 9
+        },
+        {
+          "key": "Philip van Dijk",
+          "value": 9
+        },
+        {
+          "key": "Quiringh Gerritsz. van Brekelenkam",
+          "value": 9
+        },
+        {
+          "key": "Salomon Mesdach",
+          "value": 9
+        },
+        {
+          "key": "Adriaen van de Velde",
+          "value": 8
+        },
+        {
+          "key": "Ary de Vois",
+          "value": 8
+        },
+        {
+          "key": "Charles Rochussen",
+          "value": 8
+        },
+        {
+          "key": "Cornelis van der Voort",
+          "value": 8
+        },
+        {
+          "key": "David Teniers (II)",
+          "value": 8
+        },
+        {
+          "key": "Gabriël Metsu",
+          "value": 8
+        },
+        {
+          "key": "Gerrit Adriaensz. Berckheyde",
+          "value": 8
+        },
+        {
+          "key": "Hendrik van den Bosch",
+          "value": 8
+        },
+        {
+          "key": "Jacob Cornelisz van Oostsanen",
+          "value": 8
+        },
+        {
+          "key": "Jacob Jordaens (I)",
+          "value": 8
+        },
+        {
+          "key": "Jan Lievens",
+          "value": 8
+        },
+        {
+          "key": "Jan Weenix",
+          "value": 8
+        },
+        {
+          "key": "Jan de Baen",
+          "value": 8
+        },
+        {
+          "key": "Jheronimus Bosch",
+          "value": 8
+        }
+      ],
+      "name": "principalMaker",
+      "otherTerms": 4334,
+      "prettyName": 10
+    },
+    {
+      "facets": [
+        {
+          "key": "painting",
+          "value": 4327
+        },
+        {
+          "key": "family arms",
+          "value": 3
+        },
+        {
+          "key": "harpsichord lid",
+          "value": 3
+        },
+        {
+          "key": "plate (dishes)",
+          "value": 3
+        },
+        {
+          "key": "binding",
+          "value": 2
+        },
+        {
+          "key": "panel",
+          "value": 2
+        },
+        {
+          "key": "virginal lid",
+          "value": 2
+        },
+        {
+          "key": "box",
+          "value": 1
+        },
+        {
+          "key": "copy",
+          "value": 1
+        },
+        {
+          "key": "document",
+          "value": 1
+        },
+        {
+          "key": "drawing",
+          "value": 1
+        },
+        {
+          "key": "gouache (paint)",
+          "value": 1
+        }
+      ],
+      "name": "type",
+      "otherTerms": 0,
+      "prettyName": 3
+    },
+    {
+      "facets": [
+        {
+          "key": "17",
+          "value": 2107
+        },
+        {
+          "key": "19",
+          "value": 1064
+        },
+        {
+          "key": "18",
+          "value": 561
+        },
+        {
+          "key": "16",
+          "value": 393
+        },
+        {
+          "key": "15",
+          "value": 119
+        },
+        {
+          "key": "20",
+          "value": 66
+        },
+        {
+          "key": "14",
+          "value": 13
+        },
+        {
+          "key": "13",
+          "value": 4
+        }
+      ],
+      "name": "dating.period",
+      "otherTerms": 0,
+      "prettyName": 4
+    },
+    {
+      "facets": [
+        {
+          "key": "Northern Netherlands",
+          "value": 166
+        },
+        {
+          "key": "Netherlands",
+          "value": 91
+        },
+        {
+          "key": "Amsterdam",
+          "value": 67
+        },
+        {
+          "key": "Holland",
+          "value": 46
+        },
+        {
+          "key": "Southern Netherlands",
+          "value": 40
+        },
+        {
+          "key": "Batavia",
+          "value": 34
+        },
+        {
+          "key": "Antwerp",
+          "value": 18
+        },
+        {
+          "key": "Leiden",
+          "value": 18
+        },
+        {
+          "key": "Venice",
+          "value": 13
+        },
+        {
+          "key": "France",
+          "value": 11
+        },
+        {
+          "key": "Dordrecht",
+          "value": 10
+        },
+        {
+          "key": "Germany",
+          "value": 10
+        },
+        {
+          "key": "Italy",
+          "value": 10
+        },
+        {
+          "key": "Utrecht",
+          "value": 9
+        },
+        {
+          "key": "Brussels",
+          "value": 8
+        },
+        {
+          "key": "Paris",
+          "value": 7
+        },
+        {
+          "key": "? Java",
+          "value": 5
+        },
+        {
+          "key": "? Amsterdam",
+          "value": 4
+        },
+        {
+          "key": "unknown",
+          "value": 4
+        },
+        {
+          "key": "? Dordrecht",
+          "value": 3
+        },
+        {
+          "key": "? Southern Netherlands",
+          "value": 3
+        },
+        {
+          "key": "Bruges",
+          "value": 3
+        },
+        {
+          "key": "China",
+          "value": 3
+        },
+        {
+          "key": "England",
+          "value": 3
+        },
+        {
+          "key": "Spain",
+          "value": 3
+        },
+        {
+          "key": "? Antwerp",
+          "value": 2
+        },
+        {
+          "key": "? Germany",
+          "value": 2
+        },
+        {
+          "key": "? Italy",
+          "value": 2
+        },
+        {
+          "key": "? Northern Netherlands",
+          "value": 2
+        },
+        {
+          "key": "? Utrecht",
+          "value": 2
+        },
+        {
+          "key": "London",
+          "value": 2
+        },
+        {
+          "key": "Middelburg",
+          "value": 2
+        },
+        {
+          "key": "Naples",
+          "value": 2
+        },
+        {
+          "key": "The Hague",
+          "value": 2
+        },
+        {
+          "key": "Zeeland",
+          "value": 2
+        },
+        {
+          "key": "? Bruges",
+          "value": 1
+        },
+        {
+          "key": "? Brussels",
+          "value": 1
+        },
+        {
+          "key": "? Delft",
+          "value": 1
+        },
+        {
+          "key": "? France",
+          "value": 1
+        },
+        {
+          "key": "Belgium",
+          "value": 1
+        },
+        {
+          "key": "Denmark",
+          "value": 1
+        },
+        {
+          "key": "Harlingen",
+          "value": 1
+        },
+        {
+          "key": "Japan",
+          "value": 1
+        },
+        {
+          "key": "Nederrijn",
+          "value": 1
+        },
+        {
+          "key": "Russia",
+          "value": 1
+        },
+        {
+          "key": "Sevilla",
+          "value": 1
+        },
+        {
+          "key": "Wijk bij Duurstede",
+          "value": 1
+        }
+      ],
+      "name": "place",
+      "otherTerms": 0,
+      "prettyName": 2
+    },
+    {
+      "facets": [
+        {
+          "key": "oil paint (paint)",
+          "value": 4226
+        },
+        {
+          "key": "canvas",
+          "value": 2218
+        },
+        {
+          "key": "panel",
+          "value": 1789
+        },
+        {
+          "key": "copper (metal)",
+          "value": 161
+        },
+        {
+          "key": "paper",
+          "value": 60
+        },
+        {
+          "key": "linen (material)",
+          "value": 24
+        },
+        {
+          "key": "glass",
+          "value": 23
+        },
+        {
+          "key": "oak (wood)",
+          "value": 21
+        },
+        {
+          "key": "wood (plant material)",
+          "value": 20
+        },
+        {
+          "key": "ink",
+          "value": 16
+        },
+        {
+          "key": "tempera",
+          "value": 15
+        },
+        {
+          "key": "hardboard",
+          "value": 11
+        },
+        {
+          "key": "gilding (material)",
+          "value": 10
+        },
+        {
+          "key": "particle board",
+          "value": 10
+        },
+        {
+          "key": "gouache (paint)",
+          "value": 7
+        },
+        {
+          "key": "tin (metal)",
+          "value": 7
+        },
+        {
+          "key": "brass (alloy)",
+          "value": 6
+        },
+        {
+          "key": "cotton (textile)",
+          "value": 6
+        },
+        {
+          "key": "paint (coating)",
+          "value": 6
+        },
+        {
+          "key": "gold (metal)",
+          "value": 5
+        },
+        {
+          "key": "alloy",
+          "value": 4
+        },
+        {
+          "key": "ivory",
+          "value": 4
+        },
+        {
+          "key": "mahogany (wood)",
+          "value": 4
+        },
+        {
+          "key": "parchment (animal material)",
+          "value": 4
+        },
+        {
+          "key": "asbestos-cement",
+          "value": 3
+        },
+        {
+          "key": "bronze (metal)",
+          "value": 3
+        },
+        {
+          "key": "casein paint",
+          "value": 3
+        },
+        {
+          "key": "linden",
+          "value": 2
+        },
+        {
+          "key": "metal",
+          "value": 2
+        },
+        {
+          "key": "pencil",
+          "value": 2
+        },
+        {
+          "key": "poplar (wood)",
+          "value": 2
+        },
+        {
+          "key": "silk",
+          "value": 2
+        },
+        {
+          "key": "silver (metal)",
+          "value": 2
+        },
+        {
+          "key": "textile materials",
+          "value": 2
+        },
+        {
+          "key": "tin alloy",
+          "value": 2
+        },
+        {
+          "key": "gold leaf",
+          "value": 1
+        },
+        {
+          "key": "pear (wood)",
+          "value": 1
+        },
+        {
+          "key": "plywood",
+          "value": 1
+        },
+        {
+          "key": "slate (rock)",
+          "value": 1
+        },
+        {
+          "key": "softwood",
+          "value": 1
+        }
+      ],
+      "name": "material",
+      "otherTerms": 0,
+      "prettyName": 5
+    },
+    {
+      "facets": [
+        {
+          "key": "brush",
+          "value": 13
+        }
+      ],
+      "name": "technique",
+      "otherTerms": 0,
+      "prettyName": 8
+    },
+    {
+      "facets": [
+        {
+          "key": " #E0CC91",
+          "value": 2440
+        },
+        {
+          "key": "#000000",
+          "value": 1630
+        },
+        {
+          "key": " #B35A1F",
+          "value": 1555
+        },
+        {
+          "key": " #000000",
+          "value": 1362
+        },
+        {
+          "key": " #737C84",
+          "value": 1186
+        },
+        {
+          "key": " #2F4F4F",
+          "value": 974
+        },
+        {
+          "key": " #FBF6E1",
+          "value": 743
+        },
+        {
+          "key": "#E0CC91",
+          "value": 480
+        },
+        {
+          "key": " #367614",
+          "value": 357
+        },
+        {
+          "key": " #E09714",
+          "value": 357
+        },
+        {
+          "key": "#B35A1F",
+          "value": 345
+        },
+        {
+          "key": "#2F4F4F",
+          "value": 247
+        },
+        {
+          "key": "#737C84",
+          "value": 211
+        },
+        {
+          "key": " #981313",
+          "value": 201
+        },
+        {
+          "key": " #B5BFCC",
+          "value": 197
+        },
+        {
+          "key": "#FBF6E1",
+          "value": 72
+        },
+        {
+          "key": "#981313",
+          "value": 65
+        },
+        {
+          "key": " #F6ECF3",
+          "value": 62
+        },
+        {
+          "key": " #62AD77",
+          "value": 29
+        },
+        {
+          "key": "#367614",
+          "value": 25
+        },
+        {
+          "key": "#B5BFCC",
+          "value": 24
+        },
+        {
+          "key": " #4279DB",
+          "value": 20
+        },
+        {
+          "key": " #F49B7A",
+          "value": 19
+        },
+        {
+          "key": " #FFEB00",
+          "value": 8
+        },
+        {
+          "key": "#E09714",
+          "value": 6
+        },
+        {
+          "key": " #DDA5AA",
+          "value": 5
+        },
+        {
+          "key": " #4019B1",
+          "value": 4
+        },
+        {
+          "key": " #C7F2F4",
+          "value": 4
+        },
+        {
+          "key": "#62AD77",
+          "value": 4
+        },
+        {
+          "key": " #850085",
+          "value": 3
+        },
+        {
+          "key": "#F6ECF3",
+          "value": 3
+        },
+        {
+          "key": " #2CAAA7",
+          "value": 2
+        }
+      ],
+      "name": "normalized32Colors.hex",
+      "otherTerms": 12651,
+      "prettyName": 9
+    }
+  ]
+}

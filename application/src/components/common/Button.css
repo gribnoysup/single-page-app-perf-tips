@@ -1,0 +1,36 @@
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+
+.Pink {
+  background-color: #ff206e;
+  color: #ffffff;
+}
+
+.Yellow {
+  background-color: #fbff12;
+  color: #0c0f0a;
+}
+
+.Cyan {
+  background-color: #41ead4;
+  color: #0c0f0a;
+}
+
+.Grey {
+  background-color: #bcbdbc;
+  color: #4e504c;
+}

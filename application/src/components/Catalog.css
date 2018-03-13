@@ -1,0 +1,84 @@
+.List {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+
+  /* text-overflow inside flex-child fix */
+  /* more info: https://css-tricks.com/flexbox-truncated-text/ */
+  min-width: 0;
+}
+
+.ListItem {
+  display: block;
+  list-style: none;
+}
+
+.ItemImagePreview {
+  display: flex;
+  align-items: flex-end;
+
+  height: 132px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: height 0.2s ease-in-out;
+  will-change: height;
+}
+
+.ItemImagePreviewActive {
+  height: 256px;
+}
+
+.ItemHeading {
+  flex: 1;
+  padding: 8px;
+  color: #ffffff;
+  background-color: rgba(12, 15, 10, 0.4);
+
+  /* text-overflow inside flex-child fix */
+  /* more info: https://css-tricks.com/flexbox-truncated-text/ */
+  min-width: 0;
+}
+
+.ItemTitle,
+.ItemSubtitle {
+  margin: 4px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ItemTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ItemSubtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ItemActions {
+  display: flex;
+  overflow: hidden;
+
+  height: 0;
+  transition: height 0.2s ease-in-out;
+}
+
+.ItemActionsActive {
+  height: 56px;
+}
+
+.ItemButton {
+  flex: 1 1 50%;
+
+  height: 56px;
+  min-height: 56px;
+
+  font-size: 20px;
+  font-weight: 600;
+}
