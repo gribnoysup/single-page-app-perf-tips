@@ -1,26 +1,38 @@
 module.exports = [
   {
-    name: 'checkout',
-    type: 'multi',
+    name: 'update',
+    type: null,
   },
-  //   {
-  //     name: 'build',
-  //     type: 'multi',
-  //   },
-  //   {
-  //     name: 'run',
-  //     type: 'single',
-  //   },
-  //   {
-  //     name: 'measure',
-  //     type: 'multi',
-  //   },
-  //   {
-  //     name: 'compare',
-  //     type: 'multi',
-  //   },
-  //   {
-  //     name: 'metrics',
-  //     type: 'single',
-  //   },
+  {
+    name: 'fetch',
+    type: 'multiselect',
+    message: 'Which applications do you want to fetch?',
+    excludeCurrent: true,
+  },
+  {
+    name: 'clear',
+    type: 'multiselect',
+    message: 'Which applications do you want to clear?',
+    excludeCurrent: false,
+  },
+  // {
+  //   name: 'build',
+  //   type: 'multiselect',
+  // },
+  // {
+  //   name: 'run',
+  //   type: 'select',
+  // },
+  // {
+  //   name: 'measure',
+  //   type: 'multiselect',
+  // },
+  // {
+  //   name: 'compare',
+  //   type: 'multiselect',
+  // },
+  // {
+  //   name: 'metrics',
+  //   type: 'select',
+  // },
 ];

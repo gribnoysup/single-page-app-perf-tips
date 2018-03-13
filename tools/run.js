@@ -3,6 +3,7 @@ const path = require('path');
 const mri = require('mri');
 const prompts = require('prompts');
 const chalk = require('chalk');
+const git = require('simple-git/promise');
 
 const logger = require('./logger');
 const commands = require('./commands');
@@ -11,9 +12,12 @@ const parsed = mri(process.argv.slice(2));
 
 const availableCommands = commands.map(command => command.name).join(', ');
 
-const appFolder = 'application';
+const currentAppOption = {
+  title: 'current application',
+  value: 'current',
+};
 
-const main = (_, args) => {
+const main = async (_, args) => {
   const command = commands.find(command => command.name === _);
 
   if (!command) {
@@ -28,7 +32,36 @@ const main = (_, args) => {
 
   try {
     const pathToScript = path.resolve(__dirname, command.name + '.js');
-    return require(pathToScript)([], args);
+
+    if (command.type === null) {
+      return await require(pathToScript)(args);
+    } else {
+      const { all: tags } = await git().tags();
+      const choices = tags.map(tagName => ({ value: tagName, title: tagName }));
+
+      if (command.excludeCurrent !== true) {
+        choices.unshift(currentAppOption);
+      }
+
+      const { applications } = await prompts({
+        choices,
+        type: command.type,
+        message: command.message,
+        name: 'applications',
+      });
+
+      const script = require(pathToScript);
+
+      if (Array.isArray(applications)) {
+        for (const application of applications) {
+          await script(application, args);
+        }
+
+        return;
+      } else {
+        return await script(applications, args);
+      }
+    }
   } catch (e) {
     logger.process.fail();
 
