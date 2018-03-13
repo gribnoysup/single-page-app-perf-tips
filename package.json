@@ -1,0 +1,26 @@
+{
+  "name": "single-page-app-perf-tips",
+  "version": "1.0.0",
+  "description":
+    "A sandbox with various single page application optimization tips",
+  "scripts": {
+    "prettier": "prettier --write",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["npm run prettier", "git add"]
+  },
+  "keywords": [],
+  "author": "Sergey Petushkov <petushkov.sergey@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^2.3.2",
+    "eslint": "^4.18.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "mri": "^1.1.0",
+    "ora": "^2.0.0",
+    "prettier": "^1.11.1",
+    "prompts": "^0.1.8"
+  }
+}
