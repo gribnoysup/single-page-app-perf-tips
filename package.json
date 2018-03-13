@@ -5,7 +5,8 @@
     "A sandbox with various single page application optimization tips",
   "scripts": {
     "prettier": "prettier --write",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "sandbox": "node ./tools/index.js"
   },
   "lint-staged": {
     "*.{js,json,css,md}": ["npm run prettier", "git add"]
