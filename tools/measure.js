@@ -1,12 +1,9 @@
 const path = require('path');
 
 const fs = require('fs-extra');
-const chalk = require('chalk');
 const prompts = require('prompts');
 const chromeLauncher = require('chrome-launcher');
 const lighthouse = require('lighthouse');
-const wunderbar = require('@gribnoysup/wunderbar');
-const { width: terminalWidth } = require('window-size');
 
 // We would not use PWmetrics directly because we need to modify config
 // in a not supproted way. We will still use some helper methods from
@@ -16,6 +13,7 @@ const pwMetrics = require('pwmetrics/lib/metrics');
 const build = require('./build');
 const start = require('./start');
 const clear = require('./clear');
+const printMetrics = require('./print-metrics');
 
 const logger = require('./utils/logger');
 const isChromeAvailable = require('./utils/isChromeAvailable');
@@ -33,11 +31,11 @@ const pwConfig = {
   passes: [
     {
       recordTrace: true,
-      pauseBeforeTraceEndMs: 15000,
+      pauseBeforeTraceEndMs: 25000,
       pauseAfterNetworkQuietMs: 15000,
-      pauseAfterLoadMs: 15000,
-      networkQuietThresholdMs: 15000,
-      cpuQuietThresholdMs: 15000,
+      pauseAfterLoadMs: 25000,
+      networkQuietThresholdMs: 25000,
+      cpuQuietThresholdMs: 25000,
       useThrottling: true,
       gatherers: [],
     },
@@ -109,10 +107,7 @@ const runAuditAndFindMedian = async (project, url, options, config) => {
 
 const measure = async (
   project,
-  {
-    skipResults = false,
-    chromeFlags = ['--headless', '--disable-gpu', '--incognito'],
-  } = {}
+  { skipResults = false, chromeFlags = ['--headless', '--disable-gpu'] } = {}
 ) => {
   const projectDir = getProjectDir(project);
   let serverProcess, chromeProcess;
@@ -149,6 +144,10 @@ const measure = async (
       output: 'json',
       port: chromeProcess.port,
       chromeFlags,
+      extraHeaders: {
+        Cookie: '__cart_items__=SK-A-1796|SK-C-2|SK-A-3148',
+        'Lighthouse-Cookie': '__cart_items__=SK-A-1796|SK-C-2|SK-A-3148',
+      },
     };
 
     const results = [];
@@ -166,7 +165,10 @@ const measure = async (
 
     logger.process.fresh(`${f(project)} Writing metrics.json`);
 
-    await fs.writeJSON(path.join(projectDir, 'metrics.json'), results);
+    await fs.writeFile(
+      path.join(projectDir, 'metrics.json'),
+      JSON.stringify(results, null, 2)
+    );
 
     logger.process.succeed();
 
@@ -179,29 +181,7 @@ const measure = async (
       });
 
       if (shouldPrintResults === true) {
-        logger.info(`${f(project)} Application Performance Metrics:`);
-        logger.n();
-
-        results.forEach(({ url, timings }) => {
-          const normalized = timings.map(({ timing, title }) => ({
-            label: title,
-            value: timing,
-          }));
-
-          const { chart, legend, scale } = wunderbar(normalized, {
-            length: Math.min(terminalWidth, 128),
-            randomColorOptions: { seed: 'unicorn' },
-          });
-
-          logger.noformat(chalk.bold(`Route: ${url}`));
-          logger.n();
-          logger.noformat(chart);
-          logger.n();
-          logger.noformat(scale);
-          logger.n();
-          logger.noformat(legend);
-          logger.n();
-        });
+        printMetrics(project, { metrics: results });
       }
     }
 

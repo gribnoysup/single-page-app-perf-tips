@@ -12,6 +12,7 @@
     "fetch": "node ./tools/index.js fetch",
     "clear": "node ./tools/index.js clear",
     "measure": "node ./tools/index.js measure",
+    "print-metrics": "node ./tools/index.js print-metrics",
     "sandbox": "node ./tools/index.js"
   },
   "lint-staged": {

@@ -24,13 +24,19 @@ module.exports = [
   {
     name: 'start',
     type: 'select',
-    message: 'Which applications do you want to start?',
+    message: 'Which application do you want to start?',
     excludeCurrent: false,
   },
   {
     name: 'measure',
     type: 'multiselect',
     message: 'Which applications do you want to measure?',
+    excludeCurrent: false,
+  },
+  {
+    name: 'print-metrics',
+    type: 'select',
+    message: 'For which application do you want to see the metrics?',
     excludeCurrent: false,
   },
   // {
