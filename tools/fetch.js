@@ -1,38 +1,43 @@
 const path = require('path');
 
 const fs = require('fs-extra');
+const b = require('chalk').bold;
 const git = require('simple-git/promise');
 
-const logger = require('./logger');
-const { getPathToApp, rootPath, repoPath } = require('./utils/paths');
-
-const b = require('chalk').bold;
+const logger = require('./utils/logger');
+const f = require('./utils/format');
+const {
+  getProjectDir,
+  rootDir,
+  repoPath,
+  tmpFolder,
+} = require('./utils/paths');
 
 const fetch = async project => {
-  const appDir = getPathToApp(project);
-  const tmpDir = path.join(rootPath, 'tmp', `.${project}`);
+  const appDir = getProjectDir(project);
+  const tmpDir = path.join(rootDir, tmpFolder, `.${project}`);
 
-  logger.process(`Checking if ${b(project)} already exists`);
+  logger.process(`${f(project)} Checking if application already exists`);
 
   if (await fs.pathExists(appDir)) {
-    logger.process.succeed('Application already exists');
+    logger.process.succeed(`${f(project)} Application already exists`);
     return;
   }
 
-  logger.process(`Cloning ${b(project)} to ${b(tmpDir)}`);
+  logger.process(`${f(project)} Cloning application to ${b(tmpDir)}`);
 
   await git().clone(repoPath, tmpDir);
 
-  logger.process(`Moving ${b(project)} application code to ${b(appDir)}`);
+  logger.process(`${f(project)} Moving application code to ${b(appDir)}`);
 
   await fs.move(path.join(tmpDir, 'application'), appDir);
 
-  logger.process('Cleaning up');
+  logger.process(`${f(project)} Cleaning up`);
 
   await fs.remove(tmpDir);
 
   logger.process.succeed(
-    `Application ${b(project)} is available in ${b(appDir)}`
+    `${f(project)} Application is available in ${b(appDir)}`
   );
 };
 

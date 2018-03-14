@@ -5,7 +5,7 @@ const prompts = require('prompts');
 const chalk = require('chalk');
 const git = require('simple-git/promise');
 
-const logger = require('./logger');
+const logger = require('./utils/logger');
 const commands = require('./commands');
 
 const parsed = mri(process.argv.slice(2));
@@ -58,7 +58,7 @@ const main = async (_, args) => {
         }
 
         return;
-      } else {
+      } else if (applications) {
         return await script(applications, args);
       }
     }

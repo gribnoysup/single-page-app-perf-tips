@@ -1,19 +1,22 @@
 const path = require('path');
 
-const rootPath = path.resolve(__dirname, '..', '..');
+const tmpFolder = 'sandbox';
 
-const packageJson = require(path.join(rootPath, 'package.json'));
+const rootDir = path.resolve(__dirname, '..', '..');
 
-const getPathToApp = pathOrTagName => {
-  if (pathOrTagName === 'current') {
-    return path.join(rootPath, 'application');
+const packageJson = require(path.join(rootDir, 'package.json'));
+
+const getProjectDir = appOrTagName => {
+  if (appOrTagName === 'current') {
+    return path.join(rootDir, 'application');
   } else {
-    return path.join(rootPath, 'tmp', pathOrTagName);
+    return path.join(rootDir, tmpFolder, appOrTagName);
   }
 };
 
 module.exports = {
-  rootPath,
-  getPathToApp,
+  rootDir,
+  getProjectDir,
   repoPath: packageJson.repository.url,
+  tmpFolder,
 };

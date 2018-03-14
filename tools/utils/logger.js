@@ -42,6 +42,7 @@ processLogger.fail = fail;
 
 module.exports = {
   n: () => console.log(),
+  noformat: (...args) => console.log(...args),
   log: formatMessage(' ', 'log', chalk.gray),
   info: formatMessage('ℹ', 'info', chalk.cyan),
   warn: formatMessage('⚠', 'warn', chalk.yellow),
