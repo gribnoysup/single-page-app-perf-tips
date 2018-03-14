@@ -49,7 +49,7 @@ module.exports = {
       },
     ]),
   ],
-  devtool: 'cheap-module-source-map',
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     historyApiFallback: true,
     port: 4242,
