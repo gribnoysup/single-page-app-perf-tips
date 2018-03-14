@@ -19,13 +19,25 @@ const pinoLogger = pino({ level: LOG_LEVEL }, prettyStream);
 // Pino-colada will format all logs and stream them to stdout
 prettyStream.pipe(process.stdout);
 
+app.use((req, res, next) => {
+  // We will use Lighthouse-Cookie header to detect
+  // that request is coming from lighthouse
+  if (req.get('Lighthouse-Cookie')) {
+    // We will use this cookie to simulate non-empty cart in our tests
+    const [name, value] = req.get('Lighthouse-Cookie').split('=');
+    res.cookie(name, value);
+  }
+
+  next();
+});
+
 // Activate logger middleware for all routes
 app.use(loggerMiddleware({ logger: pinoLogger }));
 
 // Use API router for all /api requests
 app.use('/api', apiRouter);
 
-// As our dev server also needs API support to function,
+// As our dev server also needs API support to work properly,
 // we will use webpack-dev-middleware if a special --dev flag
 // is provided, otherwise we will just serve build assets with
 // static router
