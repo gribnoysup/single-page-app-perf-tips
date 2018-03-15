@@ -12,7 +12,6 @@ const pwMetrics = require('pwmetrics/lib/metrics');
 
 const build = require('./build');
 const start = require('./start');
-const clear = require('./clear');
 const printMetrics = require('./print-metrics');
 
 const logger = require('./utils/logger');
@@ -51,16 +50,23 @@ const pwConfig = {
 
 const waitForAppReady = (project, subprocess) =>
   new Promise((resolve, reject) => {
-    const throwTimeout = setTimeout(() => {
-      reject(new Error(`${project} took too much time to start`));
-    }, 20000);
+    let throwTimeout;
 
-    subprocess.on('message', data => {
+    const onMessage = data => {
       if (data && typeof data === 'object' && data.state === 'READY') {
         clearTimeout(throwTimeout);
         resolve(data.url);
       }
-    });
+    };
+
+    const onError = () => {
+      subprocess.removeListener('message', onMessage);
+      reject(new Error(`${project} took too much time to start`));
+    };
+
+    throwTimeout = setTimeout(onError, 20000);
+
+    subprocess.on('message', onMessage);
   });
 
 const median = values => {
@@ -119,8 +125,7 @@ const measure = async (
 
     logger.info(`${f(project)} Creating fresh build`);
 
-    await clear(project);
-    await build(project);
+    await build(project, { fresh: true });
 
     logger.process.fresh(`${f(project)} Starting application`);
 

@@ -18,10 +18,14 @@ const execAsync = promisify(exec);
 
 const build = async (
   project,
-  { stdio = 'ignore', failOnError = false } = {}
+  { stdio = 'ignore', failOnError = false, fresh = false } = {}
 ) => {
   if (project !== 'current') {
     await fetch(project);
+  }
+
+  if (fresh === true) {
+    await clear(project);
   }
 
   const projectDir = getProjectDir(project);

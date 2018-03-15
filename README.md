@@ -114,8 +114,11 @@ npm run fetch -- --override
 This command will install application dependencies and build an application for
 the selected releases.
 
+You can use `--fresh` flag to remove `node_modules` and `build` folders before
+building an application.
+
 ```
-npm run build
+npm run build -- --fresh
 ```
 
 ### Start
