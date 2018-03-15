@@ -13,18 +13,27 @@ const {
   tmpFolder,
 } = require('./utils/paths');
 
-const fetch = async project => {
+const fetch = async (project, { override = false } = {}) => {
   const appDir = getProjectDir(project);
   const tmpDir = path.join(rootDir, tmpFolder, `.${project}`);
 
-  logger.process(`${f(project)} Checking if application already exists`);
+  if (override === true) {
+    if (await fs.pathExists(appDir)) {
+      logger.process(
+        `${f(project)} Application already exists. Removing folder`
+      );
+      await fs.remove(appDir);
+    }
+  } else {
+    logger.process(`${f(project)} Checking if application already exists`);
 
-  if (await fs.pathExists(appDir)) {
-    logger.process.succeed(`${f(project)} Application already exists`);
-    return;
+    if (await fs.pathExists(appDir)) {
+      logger.process.succeed(`${f(project)} Application already exists`);
+      return;
+    }
   }
 
-  logger.process(`${f(project)} Cloning application to ${b(tmpDir)}`);
+  logger.process(`${f(project)} Cloning repository to ${b(tmpDir)}`);
 
   await git().clone(repoPath, tmpDir);
 
