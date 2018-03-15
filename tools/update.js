@@ -27,7 +27,7 @@ const update = async () => {
 
       await git().fetch();
 
-      logger.process.succeed();
+      logger.process.succeed('Updated local');
     }
   } else {
     logger.process.succeed('Local is up to date');
