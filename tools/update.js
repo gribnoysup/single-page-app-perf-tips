@@ -3,6 +3,8 @@ const git = require('simple-git/promise');
 
 const logger = require('./utils/logger');
 
+const unique = array => [...new Set(array)];
+
 const update = async () => {
   logger.process('Checking for updates');
 
@@ -11,12 +13,12 @@ const update = async () => {
   if (Array.isArray(summary.tags) && summary.tags.length > 0) {
     logger.process.succeed(`Found changes in remote`);
 
-    const tags = summary.tags.map(tag => tag.name).join(', ');
+    const tags = unique(summary.tags.map(tag => tag.name)).join(', ');
 
     const { shouldUpdate } = await prompts({
       type: 'confirm',
       name: 'shouldUpdate',
-      message: `Found new tags in the origin: ${tags}. Do yo want to update local?`,
+      message: `Found new tag(s) in the origin: ${tags}. Do yo want to update local?`,
       initial: true,
     });
 

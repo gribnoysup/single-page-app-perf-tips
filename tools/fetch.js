@@ -13,11 +13,11 @@ const {
   tmpFolder,
 } = require('./utils/paths');
 
-const fetch = async (project, { override = false } = {}) => {
+const fetch = async (project, { overwrite = false } = {}) => {
   const appDir = getProjectDir(project);
   const tmpDir = path.join(rootDir, tmpFolder, `.${project}`);
 
-  if (override === true) {
+  if (overwrite === true) {
     if (await fs.pathExists(appDir)) {
       logger.process(
         `${f(project)} Application already exists. Removing folder`
