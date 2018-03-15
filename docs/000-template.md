@@ -32,7 +32,7 @@ production build. That way we will get fast rebuilt times in development with
 
 If you see any drawbacks in your solution, please mention it here. Going further
 with this source maps example, your drawbacks could be "Using `source-map` makes
-our production build smaller"
+our production build slower"
 
 # Related articles
 
