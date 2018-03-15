@@ -48,13 +48,17 @@ const main = async (_, args) => {
         type: command.type,
         message: command.message,
         name: 'applications',
+        hint: command.hint,
+        max: command.max,
       });
-
-      logger.n();
 
       const script = require(pathToScript);
 
-      if (Array.isArray(applications)) {
+      if (Array.isArray(applications) && applications.length > 0) {
+        if (command.multi === true) {
+          return await script(applications, args);
+        }
+
         for (const application of applications) {
           await script(application, args);
         }

@@ -1,3 +1,5 @@
+const chalk = require('chalk');
+
 module.exports = [
   {
     name: 'update',
@@ -39,12 +41,15 @@ module.exports = [
     message: 'For which application do you want to see the metrics?',
     excludeCurrent: false,
   },
-  // {
-  //   name: 'compare',
-  //   type: 'multiselect',
-  // },
-  // {
-  //   name: 'metrics',
-  //   type: 'select',
-  // },
+  {
+    name: 'compare',
+    type: 'multiselect',
+    message: 'Which application do you want to compare?',
+    hint: `${chalk.grey('Select')} ${chalk.bold.white('two')} ${chalk.grey(
+      'applications. Space to select. Return to submit'
+    )}`,
+    multi: true,
+    excludeCurrent: false,
+    max: 2,
+  },
 ];
