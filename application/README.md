@@ -1,8 +1,9 @@
 # Application
 
 This is a shop application that allows you to browse through famous paintings
-from Rijksmuseum collection and order a poster if you desire. Product designer
-assumed that you will use this app mostly from mobile device.
+from Rijksmuseum collection and order a poster to bring a piece of world famous
+art in your home. Product designer assumed that you will use this app mostly
+from mobile device.
 
 This application has four main parts:
 
@@ -169,3 +170,18 @@ combines all the other ones.
 All other reducers are structured in the ducks pattern, that means that every
 single file contains everything related to one domain: action types, action
 creators, selectors, reducer and connect function.
+
+## Build
+
+To build application, install all application dependencies and then run
+`npm run build`
+
+## Start
+
+To start production application server, build the application first and then run
+`npm run start`
+
+## Development
+
+To start application in development mode, run `npm run dev` or
+`npm run start -- --dev`
