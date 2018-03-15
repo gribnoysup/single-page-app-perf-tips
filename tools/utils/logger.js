@@ -2,6 +2,7 @@
 
 const ora = require('ora');
 const chalk = require('chalk');
+const { info, warning, error } = require('log-symbols');
 
 const formatMessage = (prefix, type, color = _ => _) => message => {
   const [first, ...next] = message.split('\n');
@@ -44,8 +45,8 @@ module.exports = {
   n: () => console.log(),
   noformat: (...args) => console.log(...args),
   log: formatMessage(' ', 'log', chalk.gray),
-  info: formatMessage('ℹ', 'info', chalk.cyan),
-  warn: formatMessage('⚠', 'warn', chalk.yellow),
-  error: formatMessage('⨯', 'error', chalk.red),
+  info: formatMessage(info, 'info', chalk.blue),
+  warn: formatMessage(warning, 'warn', chalk.yellow),
+  error: formatMessage(error, 'error', chalk.red),
   process: processLogger,
 };
