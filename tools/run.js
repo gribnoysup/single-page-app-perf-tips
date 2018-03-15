@@ -50,6 +50,8 @@ const main = async (_, args) => {
         name: 'applications',
       });
 
+      logger.n();
+
       const script = require(pathToScript);
 
       if (Array.isArray(applications)) {

@@ -32,7 +32,11 @@ const start = async (
   const projectDir = getProjectDir(project);
 
   if (!await isBuildExists(projectDir)) {
-    logger.warn(`${f(project)} Build is not complete`);
+    logger.warn(
+      `${f(
+        project
+      )} It seems that build is not complete. Bootstrapping application.`
+    );
     await build(project, { failOnError: true });
   }
 
