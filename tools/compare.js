@@ -2,51 +2,143 @@ const path = require('path');
 
 const fs = require('fs-extra');
 const prompts = require('prompts');
-const b = require('chalk').bold;
+const chalk = require('chalk');
+const wunderbar = require('@gribnoysup/wunderbar');
+const table = require('text-table');
+const stripAnsi = require('strip-ansi');
 
-const printMetrics = require('./print-metrics');
+const measure = require('./measure');
 
 const logger = require('./utils/logger');
 const { getProjectDir } = require('./utils/paths');
-const { blue, red } = require('./utils/colors');
+const { TEST_ROUTES, TIMINGS } = require('./utils/const');
 const f = require('./utils/format');
 
 const compare = async projects => {
-  if (projects.length === 1) {
-    const { shouldPrintMetrics } = await prompts({
-      message:
-        'You selected one application. Do you want to print metrics for one application instead?',
-      type: 'confirm',
-      name: 'shouldPrintMetrics',
-    });
+  const { routes } = await prompts({
+    name: 'routes',
+    type: 'multiselect',
+    message: 'What routes do you want to compare?',
+    choices: TEST_ROUTES,
+  });
 
-    if (shouldPrintMetrics === true) {
-      await printMetrics(projects[0]);
-    }
-
-    return;
-  }
-
-  const metrics = [];
+  const metricsByProject = [];
 
   for (const project of projects) {
     const projectDir = getProjectDir(project);
     const metricsPath = path.join(projectDir, 'metrics.json');
 
     if (!await fs.pathExists(metricsPath)) {
-      const message =
-        `${f(project)} Couldn't find metrics.json for the application. ` +
-        `Please run ${b('npm run measure')} first`;
-
-      logger.error(message);
-      return;
+      logger.warn(`${f(project)} Couldn't find metrics for the application.`);
+      await measure(project, { skipResults: true });
     }
 
-    metrics.push({
+    metricsByProject.push({
       project,
-      metrics: require(metricsPath),
+      metrics: require(metricsPath).filter(({ url }) => routes.includes(url)),
     });
   }
+
+  // PLZ DON'T HATE ME
+  const allTimings = metricsByProject.reduce(
+    (acc, { metrics, project }) =>
+      acc.concat(
+        metrics.reduce(
+          (acc, { timings, url }) =>
+            acc.concat(
+              timings.map(timing => Object.assign({}, timing, { project, url }))
+            ),
+          []
+        )
+      ),
+    []
+  );
+
+  const totalMax = Math.max(...allTimings.map(({ timing }) => timing));
+
+  const filteredRoutes = TEST_ROUTES.filter(({ value }) =>
+    routes.includes(value)
+  );
+
+  let colors = null;
+
+  logger.info(`Comparing timings for ${chalk.bold(projects.join(', '))}`);
+  logger.n();
+
+  filteredRoutes.forEach(({ value: route, title }) => {
+    const heading = `Route: ${chalk.bold(route)} ${chalk.gray(`(${title})`)}`;
+
+    logger.noformat(heading);
+    logger.n();
+
+    TIMINGS.forEach(({ id, title }) => {
+      const timingsForRoute = allTimings.filter(
+        timing => timing.id === id && timing.url === route
+      );
+
+      const minTiming = Math.min(
+        ...timingsForRoute.map(({ timing }) => timing)
+      );
+      const maxTiming = Math.max(
+        ...timingsForRoute.map(({ timing }) => timing)
+      );
+
+      const normalized = timingsForRoute.map((timing, index) => ({
+        value: timing.timing,
+        color: colors && colors[index],
+        label: timing.project,
+      }));
+
+      const heading = `Metric: ${chalk.bold(title)}`;
+
+      logger.noformat(heading);
+      logger.n();
+
+      const { chart, scale, __raw } = wunderbar(normalized, {
+        length: 64,
+        min: 0,
+        max: totalMax,
+        format: '0',
+      });
+
+      if (colors === null) {
+        colors = __raw.normalizedValues.map(({ color }) => color);
+      }
+
+      const splittedChart = chart.split('\n');
+
+      const output = __raw.normalizedValues.map((value, index) => {
+        const label = value.label;
+        const timing = value.rawValue;
+        const diff =
+          timing === minTiming
+            ? 'fastest'
+            : '-' + (timing / minTiming * 100 - 100).toFixed(2) + '%';
+
+        const diffColor =
+          timing === minTiming
+            ? chalk.green
+            : timing === maxTiming ? chalk.red : _ => _;
+
+        return [
+          chalk.bold(label),
+          timing.toFixed(2),
+          diffColor(diff),
+          splittedChart[index],
+        ];
+      });
+
+      logger.noformat(
+        table(output.concat([[], ['', '', '', scale]]), {
+          stringLength: _ => stripAnsi(_).length,
+          align: ['l', 'r', 'r', 'l'],
+        })
+      );
+      logger.n();
+    });
+
+    logger.n();
+  });
 };
 
 module.exports = compare;

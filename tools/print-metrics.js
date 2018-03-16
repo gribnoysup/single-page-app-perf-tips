@@ -1,7 +1,7 @@
 const path = require('path');
 
 const fs = require('fs-extra');
-const b = require('chalk').bold;
+const chalk = require('chalk');
 const wunderbar = require('@gribnoysup/wunderbar');
 const { width: terminalWidth } = require('window-size');
 
@@ -15,12 +15,8 @@ const printMetrics = async (project, { metrics } = {}) => {
   const metricsPath = path.join(projectDir, 'metrics.json');
 
   if (!Array.isArray(metrics) && !await fs.pathExists(metricsPath)) {
-    const message =
-      `${f(project)} Couldn't find metrics.json for the application. ` +
-      `Please run ${b('npm run measure')} first`;
-
-    logger.error(message);
-    return;
+    logger.warn(`${f(project)} Couldn't find metrics for the application.`);
+    await require('./measure')(project, { skipResults: true });
   }
 
   if (!metrics) {
@@ -35,8 +31,6 @@ const printMetrics = async (project, { metrics } = {}) => {
     []
   );
 
-  const totalMin = Math.min(...allTimings);
-
   const totalMax = Math.max(...allTimings);
 
   metrics.forEach(({ url, timings }) => {
@@ -48,12 +42,12 @@ const printMetrics = async (project, { metrics } = {}) => {
 
     const { chart, legend, scale } = wunderbar(normalized, {
       length: Math.min(terminalWidth, 128),
-      min: totalMin,
+      min: 0,
       max: totalMax,
       format: '0',
     });
 
-    logger.noformat(b(`Route: ${url}`));
+    logger.noformat(chalk.bold(`Route: ${url}`));
     logger.n();
     logger.noformat(chart);
     logger.n();

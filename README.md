@@ -157,6 +157,15 @@ process.
 npm run measure -- --skipResults
 ```
 
+### Compare
+
+This command will print metrics for several applications in a way that will
+allow you to compare timings for every page.
+
+```
+npm run compare
+```
+
 ### Print metrics
 
 This command will print application performance metrics that are stored with

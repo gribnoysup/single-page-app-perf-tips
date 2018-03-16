@@ -45,11 +45,7 @@ module.exports = [
     name: 'compare',
     type: 'multiselect',
     message: 'Which application do you want to compare?',
-    hint: `${chalk.grey('Select')} ${chalk.bold.white('two')} ${chalk.grey(
-      'applications. Space to select. Return to submit'
-    )}`,
-    multi: true,
     excludeCurrent: false,
-    max: 2,
+    multi: true,
   },
 ];

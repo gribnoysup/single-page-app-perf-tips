@@ -12,16 +12,12 @@ const pwMetrics = require('pwmetrics/lib/metrics');
 
 const build = require('./build');
 const start = require('./start');
-const printMetrics = require('./print-metrics');
 
 const logger = require('./utils/logger');
 const isChromeAvailable = require('./utils/isChromeAvailable');
 const { getProjectDir } = require('./utils/paths');
+const { TEST_ROUTES, NUMBER_OF_RUNS } = require('./utils/const');
 const f = require('./utils/format');
-
-const TEST_ROUTES = ['/', '/catalog', '/product/SK-A-1718', '/cart'];
-
-const NUMBER_OF_RUNS = process.env.NUMBER_OF_RUNS || 3;
 
 // We use modified PWMetrics config to bump threshold on all metrics,
 // otherwise we are not registering VC100 and PSI correctly. Original
@@ -157,7 +153,7 @@ const measure = async (
 
     const results = [];
 
-    for (const route of TEST_ROUTES) {
+    for (const { value: route } of TEST_ROUTES) {
       const result = await runAuditAndFindMedian(
         project,
         baseUrl + route,
@@ -186,7 +182,7 @@ const measure = async (
       });
 
       if (shouldPrintResults === true) {
-        printMetrics(project, { metrics: results });
+        require('./print-metrics')(project, { metrics: results });
       }
     }
 
