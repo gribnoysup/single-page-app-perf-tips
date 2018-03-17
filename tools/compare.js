@@ -123,8 +123,8 @@ const compare = async projects => {
 
         const diffColor =
           timing === minTiming
-            ? chalk.green
-            : timing === maxTiming ? chalk.red : _ => _;
+            ? chalk.bold.green
+            : timing === maxTiming ? chalk.bold.red : _ => _;
 
         return [
           chalk.bold(label),
