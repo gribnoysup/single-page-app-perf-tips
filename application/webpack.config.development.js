@@ -1,3 +1,9 @@
+/**
+ * ╔════════════════════════════════════════════════════════════════════════════════════════╗
+ * ║ !!! THIS IS DEVELOPMENT CONFIG AND SHOULD BE USED ONLY FOR DEVELOPMENT ENVIRONMENT !!! ║
+ * ╚════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
