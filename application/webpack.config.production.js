@@ -9,6 +9,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
   entry: {
     app: [
@@ -57,6 +59,25 @@ module.exports = {
         to: path.resolve(__dirname, 'build', '[name].[ext]'),
       },
     ]),
+
+    // Apply minification to JavaScript bundle
+    new UglifyJsPlugin({
+      // Parallel will allow webpack to
+      // run several uglifiers in parallel
+      // speeding up our build process if
+      // possible
+      parallel: true,
+      uglifyOptions: {
+        // Several passes can produce better
+        // minification results in some cases
+        compress: { passes: 2 },
+        // This can shave off a few bytes
+        output: { comments: false },
+      },
+      // Enable source maps
+      // (makes file a little bit bigger)
+      sourceMap: true,
+    }),
   ],
   devtool: 'source-map',
   devServer: {
