@@ -6,7 +6,7 @@
 As the issue states, we are inlining source maps right in our bundle. Although
 this provides a good developer experience, minimizing the rebuild time in
 development, it makes js application bundle much bigger. And the bigger your
-javascript file, the more time it takes to download, parse and compile it.
+javascript file, the more time it takes to download, parse and evaluate it.
 
 # Solution
 
