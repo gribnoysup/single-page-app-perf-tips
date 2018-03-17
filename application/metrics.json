@@ -5,57 +5,57 @@
       {
         "title": "First Contentful Paint",
         "id": "ttfcp",
-        "timestamp": 183491366900,
-        "timing": 9364.188,
+        "timestamp": 191067357565,
+        "timing": 4516.957,
         "color": "green"
       },
       {
         "title": "First Meaningful Paint",
         "id": "ttfmp",
-        "timestamp": 183492174153,
-        "timing": 10171.441,
+        "timestamp": 191068085963,
+        "timing": 5245.355,
         "color": "green"
       },
       {
         "title": "Perceptual Speed Index",
         "id": "psi",
-        "timestamp": 183495755349.82843,
-        "timing": 13752.637828430175,
+        "timestamp": 191071706137.45062,
+        "timing": 8865.529450622558,
         "color": "blue"
       },
       {
         "title": "First Visual Change",
         "id": "fv",
-        "timestamp": 183491366712,
-        "timing": 9364,
+        "timestamp": 191067357608,
+        "timing": 4517,
         "color": "blue"
       },
       {
         "title": "Visually Complete 85%",
         "id": "vc85",
-        "timestamp": 183502325005,
-        "timing": 20322.293,
+        "timestamp": 191078304153,
+        "timing": 15463.545,
         "color": "blue"
       },
       {
         "title": "Visually Complete 100%",
         "id": "vc100",
-        "timestamp": 183521745712,
-        "timing": 39743,
+        "timestamp": 191097710608,
+        "timing": 34870,
         "color": "blue"
       },
       {
         "title": "First Interactive (vBeta)",
         "id": "ttfi",
-        "timestamp": 183492174153,
-        "timing": 10171.441,
+        "timestamp": 191068085963,
+        "timing": 5245.355,
         "color": "yellow"
       },
       {
         "title": "Time to Consistently Interactive (vBeta)",
         "id": "ttci",
-        "timestamp": 183492174153,
-        "timing": 10171.441,
+        "timestamp": 191068085963,
+        "timing": 5245.355,
         "color": "yellow"
       }
     ]
@@ -66,57 +66,57 @@
       {
         "title": "First Contentful Paint",
         "id": "ttfcp",
-        "timestamp": 183676470404,
-        "timing": 9276.107,
+        "timestamp": 191199127583,
+        "timing": 4512.867,
         "color": "green"
       },
       {
         "title": "First Meaningful Paint",
         "id": "ttfmp",
-        "timestamp": 183677251081,
-        "timing": 10056.784,
+        "timestamp": 191199927561,
+        "timing": 5312.845,
         "color": "green"
       },
       {
         "title": "Perceptual Speed Index",
         "id": "psi",
-        "timestamp": 183678733961.2571,
-        "timing": 11539.664257110595,
+        "timestamp": 191201619754.5569,
+        "timing": 7005.038556884766,
         "color": "blue"
       },
       {
         "title": "First Visual Change",
         "id": "fv",
-        "timestamp": 183676470297,
-        "timing": 9276,
+        "timestamp": 191199127716,
+        "timing": 4513,
         "color": "blue"
       },
       {
         "title": "Visually Complete 85%",
         "id": "vc85",
-        "timestamp": 183679783196,
-        "timing": 12588.899,
+        "timestamp": 191203477086,
+        "timing": 8862.37,
         "color": "blue"
       },
       {
         "title": "Visually Complete 100%",
         "id": "vc100",
-        "timestamp": 183680789297,
-        "timing": 13595,
+        "timestamp": 191203568716,
+        "timing": 8954,
         "color": "blue"
       },
       {
         "title": "First Interactive (vBeta)",
         "id": "ttfi",
-        "timestamp": 183677251081,
-        "timing": 10056.784,
+        "timestamp": 191199927561,
+        "timing": 5312.845,
         "color": "yellow"
       },
       {
         "title": "Time to Consistently Interactive (vBeta)",
         "id": "ttci",
-        "timestamp": 183677251081,
-        "timing": 10056.784,
+        "timestamp": 191199927561,
+        "timing": 5312.845,
         "color": "yellow"
       }
     ]
@@ -127,57 +127,57 @@
       {
         "title": "First Contentful Paint",
         "id": "ttfcp",
-        "timestamp": 183805838359,
-        "timing": 9268.256,
+        "timestamp": 191366775394,
+        "timing": 4513.369,
         "color": "green"
       },
       {
         "title": "First Meaningful Paint",
         "id": "ttfmp",
-        "timestamp": 183806452128,
-        "timing": 9882.025,
+        "timestamp": 191367382111,
+        "timing": 5120.086,
         "color": "green"
       },
       {
         "title": "Perceptual Speed Index",
         "id": "psi",
-        "timestamp": 183811230280.2029,
-        "timing": 14660.177202911376,
+        "timestamp": 191372332742.59412,
+        "timing": 10070.717594116211,
         "color": "blue"
       },
       {
         "title": "First Visual Change",
         "id": "fv",
-        "timestamp": 183806370103,
-        "timing": 9800,
+        "timestamp": 191367291025,
+        "timing": 5029,
         "color": "blue"
       },
       {
         "title": "Visually Complete 85%",
         "id": "vc85",
-        "timestamp": 183820341591,
-        "timing": 23771.488,
+        "timestamp": 191381251118,
+        "timing": 18989.093,
         "color": "blue"
       },
       {
         "title": "Visually Complete 100%",
         "id": "vc100",
-        "timestamp": 183827940103,
-        "timing": 31370,
+        "timestamp": 191389911025,
+        "timing": 27649,
         "color": "blue"
       },
       {
         "title": "First Interactive (vBeta)",
         "id": "ttfi",
-        "timestamp": 183806452128,
-        "timing": 9882.025,
+        "timestamp": 191367382111,
+        "timing": 5120.086,
         "color": "yellow"
       },
       {
         "title": "Time to Consistently Interactive (vBeta)",
         "id": "ttci",
-        "timestamp": 183806452128,
-        "timing": 9882.025,
+        "timestamp": 191367382111,
+        "timing": 5120.086,
         "color": "yellow"
       }
     ]
@@ -188,57 +188,57 @@
       {
         "title": "First Contentful Paint",
         "id": "ttfcp",
-        "timestamp": 183901119630,
-        "timing": 9277.973,
+        "timestamp": 191479497221,
+        "timing": 4521.404,
         "color": "green"
       },
       {
         "title": "First Meaningful Paint",
         "id": "ttfmp",
-        "timestamp": 183901731324,
-        "timing": 9889.667,
+        "timestamp": 191480114331,
+        "timing": 5138.514,
         "color": "green"
       },
       {
         "title": "Perceptual Speed Index",
         "id": "psi",
-        "timestamp": 183901561449.99292,
-        "timing": 9719.792992919922,
+        "timestamp": 191479939754.96725,
+        "timing": 4963.937967254638,
         "color": "blue"
       },
       {
         "title": "First Visual Change",
         "id": "fv",
-        "timestamp": 183901119657,
-        "timing": 9278,
+        "timestamp": 191479496817,
+        "timing": 4521,
         "color": "blue"
       },
       {
         "title": "Visually Complete 85%",
         "id": "vc85",
-        "timestamp": 183902512501,
-        "timing": 10670.844,
+        "timestamp": 191480881492,
+        "timing": 5905.675,
         "color": "blue"
       },
       {
         "title": "Visually Complete 100%",
         "id": "vc100",
-        "timestamp": 183902617657,
-        "timing": 10776,
+        "timestamp": 191480995817,
+        "timing": 6020,
         "color": "blue"
       },
       {
         "title": "First Interactive (vBeta)",
         "id": "ttfi",
-        "timestamp": 183901731324,
-        "timing": 9889.667,
+        "timestamp": 191480114331,
+        "timing": 5138.514,
         "color": "yellow"
       },
       {
         "title": "Time to Consistently Interactive (vBeta)",
         "id": "ttci",
-        "timestamp": 183901731324,
-        "timing": 9889.667,
+        "timestamp": 191480114331,
+        "timing": 5138.514,
         "color": "yellow"
       }
     ]
