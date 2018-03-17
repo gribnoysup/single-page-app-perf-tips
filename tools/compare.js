@@ -8,6 +8,7 @@ const table = require('text-table');
 const stripAnsi = require('strip-ansi');
 
 const measure = require('./measure');
+const fetch = require('./fetch');
 
 const logger = require('./utils/logger');
 const { getProjectDir } = require('./utils/paths');
@@ -27,6 +28,11 @@ const compare = async projects => {
   for (const project of projects) {
     const projectDir = getProjectDir(project);
     const metricsPath = path.join(projectDir, 'metrics.json');
+
+    if (!await fs.pathExists(projectDir)) {
+      logger.warn(`${f(project)} Couldn't find application.`);
+      await fetch(project);
+    }
 
     if (!await fs.pathExists(metricsPath)) {
       logger.warn(`${f(project)} Couldn't find metrics for the application.`);

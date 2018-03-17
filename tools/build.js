@@ -70,6 +70,8 @@ const build = async (
     /^webpack\.config\./.test(fileName)
   );
 
+  const baseConfigName = 'webpack.config.js';
+
   if (webpackConfigFiles.length > 0) {
     await clear(project, { folders: ['build'] });
 
@@ -83,24 +85,35 @@ const build = async (
         project
       )} Found ${len} webpack configs. Which one do you want to use?`;
 
-      const { selectedConfig } = prompts({
+      const { selectedConfig } = await prompts({
         message,
         type: 'select',
         name: 'selectedConfig',
-        choices: webpackConfigFiles.map(file => ({ title: file, value: file })),
-        initial: 1,
+        choices: webpackConfigFiles
+          .map(file => ({ title: file, value: file }))
+          .sort((_, b) => b.title === baseConfigName),
+        initial: 0,
       });
+
+      if (!selectedConfig) {
+        return;
+      }
 
       configName = selectedConfig;
     }
-
-    logger.process.fresh(`${f(project)} Building application`);
 
     const webpackPath = path.join(projectDir, 'node_modules', 'webpack');
     const webpackConfig = require(path.join(projectDir, configName));
     const webpackAsync = promisify(require(webpackPath));
 
+    logger.process.fresh(
+      `${f(project)} Building application ${chalk.gray(
+        '(NODE_ENV=' + process.env.NODE_ENV + ')'
+      )}`
+    );
+
     const stats = await webpackAsync(webpackConfig);
+
     const stringified = stats.toString({
       children: false,
       modules: false,
