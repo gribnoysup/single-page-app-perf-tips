@@ -36,6 +36,7 @@ const fetch = async (project, { overwrite = false } = {}) => {
   logger.process(`${f(project)} Cloning repository to ${b(tmpDir)}`);
 
   await git().clone(repoPath, tmpDir);
+  await git(tmpDir).checkout(project);
 
   logger.process(`${f(project)} Moving application code to ${b(appDir)}`);
 
