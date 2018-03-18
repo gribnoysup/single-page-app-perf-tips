@@ -9,6 +9,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const webpack = require('webpack');
+
 module.exports = {
   entry: {
     app: [
@@ -57,6 +59,10 @@ module.exports = {
         to: path.resolve(__dirname, 'build', '[name].[ext]'),
       },
     ]),
+
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development'),
+    }),
   ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {

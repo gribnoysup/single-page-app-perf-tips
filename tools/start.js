@@ -45,7 +45,12 @@ const start = async (
   const forkOptions = {
     stdio,
     cwd: projectDir,
-    env: Object.assign({}, process.env),
+    env: Object.assign(
+      {
+        NODE_ENV: dev === true ? 'development' : 'production',
+      },
+      process.env
+    ),
     windowsHide: true,
   };
 

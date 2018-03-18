@@ -1,3 +1,7 @@
+Object.assign(process.env, {
+  NODE_ENV: process.env.NODE_ENV || 'production',
+});
+
 const pino = require('pino');
 const pinoColada = require('pino-colada');
 
@@ -9,12 +13,15 @@ const staticRouter = require('./static');
 
 const PORT = process.env.PORT || 4242;
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
-const DEV = process.argv.includes('--dev');
 
 const app = express();
 const prettyStream = pinoColada();
 
 const pinoLogger = pino({ level: LOG_LEVEL }, prettyStream);
+
+pinoLogger.info(
+  `Starting application in ${process.env.NODE_ENV} environment...`
+);
 
 // Pino-colada will format all logs and stream them to stdout
 prettyStream.pipe(process.stdout);
@@ -38,10 +45,14 @@ app.use(loggerMiddleware({ logger: pinoLogger }));
 app.use('/api', apiRouter);
 
 // As our dev server also needs API support to work properly,
-// we will use webpack-dev-middleware if a special --dev flag
-// is provided, otherwise we will just serve build assets with
-// static router
-app.use(DEV === true ? require('./development')(pinoLogger) : staticRouter);
+// we will use webpack-dev-middleware if a NODE_ENV variable
+// is set to 'development', otherwise we will just serve
+// build assets with static router
+app.use(
+  process.env.NODE_ENV === 'development'
+    ? require('./development')(pinoLogger)
+    : staticRouter
+);
 
 app.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
