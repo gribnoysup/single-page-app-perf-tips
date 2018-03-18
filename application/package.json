@@ -45,7 +45,7 @@
   "scripts": {
     "build": "webpack",
     "start": "node ./server/index.js",
-    "dev": "npm run start -- --dev"
+    "dev": "NODE_ENV=development npm run start"
   },
   "keywords": [],
   "author": "Sergey Petushkov <petushkov.sergey@gmail.com>",
