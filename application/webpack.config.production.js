@@ -13,6 +13,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const webpack = require('webpack');
 
+const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
+const mozjpeg = require('imagemin-mozjpeg');
+
 module.exports = {
   entry: {
     app: [
@@ -83,6 +86,27 @@ module.exports = {
 
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+
+    // Apply minification to image assets
+    new ImageminPlugin({
+      test: /\.(png|jpe?g)$/i,
+      pngquant: {
+        // Production build can take longer, if
+        // this means that optimization is done
+        // better
+        speed: 1,
+        // Let's try to minify png without
+        // loosing too much in quality
+        quality: 80,
+      },
+      plugins: [
+        mozjpeg({
+          // Again, as with pngs, we will try to
+          // compress images, but not too much
+          quality: 80,
+        }),
+      ],
     }),
   ],
   devtool: 'source-map',
