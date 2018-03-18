@@ -11,6 +11,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+const webpack = require('webpack');
+
 module.exports = {
   entry: {
     app: [
@@ -77,6 +79,10 @@ module.exports = {
       // Enable source maps
       // (makes file a little bit bigger)
       sourceMap: true,
+    }),
+
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
   ],
   devtool: 'source-map',
