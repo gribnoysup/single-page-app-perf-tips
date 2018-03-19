@@ -251,7 +251,7 @@ Encounter a bug or have any other questions? Open a new issue!
 [1.3]: https://github.com/GoogleChrome/lighthouse
 [1.4]: https://github.com/paulirish/pwmetrics
 [2.0]: ./docs
-[2.1]: ./releases
+[2.1]: https://github.com/gribnoysup/single-page-app-perf-tips/releases
 [3.0]: #tools
 [4.0]: #measure
 [5.0]: ./LICENSE
