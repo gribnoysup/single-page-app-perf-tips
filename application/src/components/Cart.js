@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { connect as cartItemsConnect } from '../store/cartItems';
 import { connect as cartConnect } from '../store/cart';
-import { getUrlWithSize } from '../util';
+import { getUrlWithSize, maxWidth } from '../util';
 
 import LoadingIndicator from './common/LoadingIndicator';
 
@@ -69,7 +69,7 @@ class Cart extends React.Component {
         <ul className={styles.List}>
           {cartItems.map(item => {
             const { objectNumber, headerImage, title } = item;
-            const imgSrc = getUrlWithSize(headerImage.url);
+            const imgSrc = getUrlWithSize(headerImage.url, maxWidth * 0.8);
 
             return (
               <li

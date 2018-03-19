@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { connect as catalogConnect } from '../store/catalog';
 import { connect as cartConnect } from '../store/cart';
-import { getUrlWithSize } from '../util';
+import { getUrlWithSize, maxWidth } from '../util';
 
 import LoadingIndicator from './common/LoadingIndicator';
 import Button from './common/Button';
@@ -15,7 +15,7 @@ class CatalogItem extends React.PureComponent {
   render() {
     const { item, isItemActive, toggleActiveItem, addToCart } = this.props;
 
-    const imgSrc = getUrlWithSize(item.webImage.url);
+    const imgSrc = getUrlWithSize(item.webImage.url, maxWidth * 0.8);
 
     return (
       <li className={styles.ListItem}>
