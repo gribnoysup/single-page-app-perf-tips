@@ -2,9 +2,77 @@
   position: relative;
   flex: 1 0 auto;
 
-  background-image: url(../assets/the-battle-of-waterloo.jpg);
+  /* Background image for big desktops */
+  background-image: url(../assets/the-battle-of-waterloo.jpg?size=1920);
   background-position: center;
   background-size: cover;
+}
+
+/* Background image for retina big desktops */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=3840);
+  }
+}
+
+/* Background image for desktops */
+@media (max-width: 1800px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=1800);
+  }
+}
+
+/* Background image for retina desktops */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1800px),
+  (min-resolution: 192dpi) and (max-width: 1800px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=3600);
+  }
+}
+
+/* Background image for tablet landscape */
+@media (max-width: 1200px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=1200);
+  }
+}
+
+/* Background image for retina tablet landscape */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1200px),
+  (min-resolution: 192dpi) and (max-width: 1200px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=2400);
+  }
+}
+
+/* Background image for tablet */
+@media (max-width: 900px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=900);
+  }
+}
+
+/* Background image for retina tablet */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 900px),
+  (min-resolution: 192dpi) and (max-width: 900px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=1800);
+  }
+}
+
+/* Background image for phone */
+@media (max-width: 600px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=600);
+  }
+}
+
+/* Background image for retina phone */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 600px),
+  (min-resolution: 192dpi) and (max-width: 600px) {
+  .LandingContent {
+    background-image: url(../assets/the-battle-of-waterloo.jpg?size=1200);
+  }
 }
 
 .LandingContent:before {
@@ -35,10 +103,18 @@
   margin: 0 -16px;
   padding: 0 60px 60px;
   text-align: center;
-
-  background-image: url(../assets/gold-frame.png);
+  /* Base gold frame image */
+  background-image: url(../assets/gold-frame.png?size=512);
   background-size: 100% auto;
+  background-repeat: no-repeat;
   background-position: bottom;
+}
+
+/* Gold frame image for retina screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .TitleContainer {
+    background-image: url(../assets/gold-frame.png?size=1024);
+  }
 }
 
 @media (max-width: 420px) {
