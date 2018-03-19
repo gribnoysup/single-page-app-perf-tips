@@ -50,7 +50,17 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g)$/,
-        use: [{ loader: require.resolve('file-loader') }],
+        use: [
+          {
+            // Responsive loader allows us to provide required
+            // image size right in our source code
+            loader: require.resolve('responsive-loader'),
+            options: {
+              name: '[hash].[width].[ext]',
+              adapter: require(require.resolve('responsive-loader/sharp')),
+            },
+          },
+        ],
       },
     ],
   },
