@@ -52,3 +52,25 @@ export const CatalogApi = {
     return fetch(`/api/catalog/${objectNumber}/small`).then(_ => _.json());
   },
 };
+
+const sizeParamRegEx = /=s\d+$/;
+
+export const devicePixelRatio = (window && window.devicePixelRatio) || 1;
+
+export const innerWidth = (window && window.innerWidth) || 1920;
+
+export const maxWidth = innerWidth * devicePixelRatio;
+
+// Images that we are getting with Rijksmuseum API are
+// stored in Google CDN. Fortunately for us, you can get
+// a resized version of those with just an `=s` string
+// at the end of the url
+export const getUrlWithSize = (originalUrl, size = maxWidth) => {
+  size = Math.floor(Math.min(maxWidth, size));
+
+  if (sizeParamRegEx.test(originalUrl)) {
+    return originalUrl.replace(sizeParamRegEx, `=s${size}`);
+  } else {
+    return `${originalUrl}=s${size}`;
+  }
+};
