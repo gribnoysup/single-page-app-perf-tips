@@ -5,6 +5,7 @@ import classNames from 'classnames';
 
 import { connect as cartItemsConnect } from '../store/cartItems';
 import { connect as cartConnect } from '../store/cart';
+import { getUrlWithSize, maxWidth } from '../util';
 
 import LoadingIndicator from './common/LoadingIndicator';
 
@@ -66,20 +67,25 @@ class Cart extends React.Component {
           </a>
         </p>
         <ul className={styles.List}>
-          {cartItems.map(item => (
-            <li
-              key={item.objectNumber}
-              style={{ backgroundImage: `url(${item.headerImage.url})` }}
-              className={styles.ListItem}
-            >
-              <div className={styles.ItemTitleGroup}>
-                <span className={styles.ListItemTitle}>{item.title}</span>
-                <span className={styles.ListItemCount}>
-                  &nbsp;×&nbsp;{cartUniqueItems[item.objectNumber]}
-                </span>
-              </div>
-            </li>
-          ))}
+          {cartItems.map(item => {
+            const { objectNumber, headerImage, title } = item;
+            const imgSrc = getUrlWithSize(headerImage.url, maxWidth * 0.8);
+
+            return (
+              <li
+                key={objectNumber}
+                style={{ backgroundImage: `url(${imgSrc})` }}
+                className={styles.ListItem}
+              >
+                <div className={styles.ItemTitleGroup}>
+                  <span className={styles.ListItemTitle}>{title}</span>
+                  <span className={styles.ListItemCount}>
+                    &nbsp;×&nbsp;{cartUniqueItems[objectNumber]}
+                  </span>
+                </div>
+              </li>
+            );
+          })}
         </ul>
         <Flex className={styles.ButtonGroup}>
           <Button onClick={clearCart} className={styles.Button} grey>

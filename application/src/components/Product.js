@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect as productConnect } from '../store/product';
 import { connect as cartConnect } from '../store/cart';
 
-import { getMiddle } from '../util';
+import { getMiddle, getUrlWithSize } from '../util';
 
 import ImagePreview from './ImagePreview';
 
@@ -38,11 +38,13 @@ class Product extends React.Component {
 
     if (isProductReady === false) return <LoadingIndicator />;
 
+    const imgSrc = getUrlWithSize(item.webImage.url);
+
     return (
       <div className={styles.Product}>
         <ImagePreview
           isVisible={isPreviewVisible}
-          imgSrc={item.webImage.url}
+          imgSrc={imgSrc}
           onCloseClick={this.togglePreview}
         />
 
@@ -51,7 +53,7 @@ class Product extends React.Component {
           className={styles.Image}
           style={{
             backgroundColor: getMiddle(item.colors),
-            backgroundImage: `url(${item.webImage.url})`,
+            backgroundImage: `url(${imgSrc})`,
           }}
         >
           <div className={styles.Heading}>
