@@ -1,4 +1,4 @@
-* PR: Leave this empty at the moment.
+* PR: https://github.com/gribnoysup/single-page-app-perf-tips/pull/12
 * Issue: https://github.com/gribnoysup/single-page-app-perf-tips/issues/11
 
 # Cause
