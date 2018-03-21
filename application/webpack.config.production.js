@@ -16,6 +16,11 @@ const webpack = require('webpack');
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
 const mozjpeg = require('imagemin-mozjpeg');
 
+const CompressionPlugin = require('compression-webpack-plugin');
+
+const { compress: iltorb } = require('iltorb');
+const { gzip } = require('node-zopfli');
+
 module.exports = {
   entry: {
     app: [
@@ -117,6 +122,20 @@ module.exports = {
           quality: 80,
         }),
       ],
+    }),
+
+    // Process files and output gzip
+    new CompressionPlugin({
+      test: /\.(js|html|map)/,
+      asset: '[path].gz',
+      algorithm: gzip,
+    }),
+
+    // Process files and output brotli
+    new CompressionPlugin({
+      test: /\.(js|html|map)/,
+      asset: '[path].br',
+      algorithm: iltorb,
     }),
   ],
   devtool: 'source-map',
