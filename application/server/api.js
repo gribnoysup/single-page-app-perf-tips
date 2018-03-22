@@ -1,9 +1,12 @@
 const path = require('path');
 const express = require('express');
+const compressionMiddleware = require('compression');
 
 const router = express.Router();
 
 const fixturePath = path.resolve(__dirname, '..', '__fixtures__');
+
+router.use(compressionMiddleware());
 
 router.get('/catalog', (req, res) => {
   res.sendFile(path.join(fixturePath, 'catalog.json'));
