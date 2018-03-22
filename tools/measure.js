@@ -74,23 +74,46 @@ const median = values => {
   return sorted[half];
 };
 
-const runAuditAndFindMedian = async (project, url, options, config) => {
+const runAuditAndFindMedian = async (project, url, chromeFlags, config) => {
   const runs = Array.from({ length: NUMBER_OF_RUNS }, (_, idx) => idx);
+
+  let chromeProcess;
 
   logger.process.fresh(
     `${f(project)} Gathering metrics for ${url} (0/${runs.length})`
   );
 
-  for (const runIdx of runs) {
+  for (const runIndex of runs) {
     logger.process(
-      `${f(project)} Gathering metrics for ${url} (${runIdx + 1}/${
+      `${f(project)} Gathering metrics for ${url} (${runIndex + 1}/${
         runs.length
       })`
     );
 
-    runs[runIdx] = pwMetrics.prepareData(
-      await lighthouse(url, options, config)
-    );
+    try {
+      chromeProcess = await chromeLauncher.launch({
+        startingUrl: 'about:blank',
+        chromeFlags,
+      });
+
+      const lighthouseOptions = {
+        output: 'json',
+        port: chromeProcess.port,
+        chromeFlags,
+        extraHeaders: {
+          Cookie: '__cart_items__=SK-A-1796|SK-C-2|SK-A-3148',
+          'Lighthouse-Cookie': '__cart_items__=SK-A-1796|SK-C-2|SK-A-3148',
+        },
+      };
+
+      runs[runIndex] = pwMetrics.prepareData(
+        await lighthouse(url, lighthouseOptions, config)
+      );
+    } finally {
+      if (chromeProcess && typeof chromeProcess.kill === 'function') {
+        chromeProcess.kill();
+      }
+    }
   }
 
   const timingValues = runs.map(
@@ -109,10 +132,10 @@ const runAuditAndFindMedian = async (project, url, options, config) => {
 
 const measure = async (
   project,
-  { skipResults = false, chromeFlags = ['--headless', '--disable-gpu'] } = {}
+  { skipResults = false, chromeFlags = [] } = {}
 ) => {
   const projectDir = getProjectDir(project);
-  let serverProcess, chromeProcess;
+  let serverProcess;
 
   try {
     if (!await isChromeAvailable()) {
@@ -132,32 +155,13 @@ const measure = async (
 
     const baseUrl = await waitForAppReady(project, serverProcess);
 
-    logger.process.fresh(`${f(project)} Starting chrome`);
-
-    chromeProcess = await chromeLauncher.launch({
-      startingUrl: 'about:blank',
-      chromeFlags,
-    });
-
-    logger.process.succeed();
-
-    const lighthouseOptions = {
-      output: 'json',
-      port: chromeProcess.port,
-      chromeFlags,
-      extraHeaders: {
-        Cookie: '__cart_items__=SK-A-1796|SK-C-2|SK-A-3148',
-        'Lighthouse-Cookie': '__cart_items__=SK-A-1796|SK-C-2|SK-A-3148',
-      },
-    };
-
     const results = [];
 
     for (const { value: route } of TEST_ROUTES) {
       const result = await runAuditAndFindMedian(
         project,
         baseUrl + route,
-        lighthouseOptions,
+        chromeFlags,
         pwConfig
       );
 
@@ -188,9 +192,6 @@ const measure = async (
 
     logger.info('All done. Cleaning up.');
   } finally {
-    if (chromeProcess && typeof chromeProcess.kill === 'function') {
-      chromeProcess.kill();
-    }
     if (serverProcess && typeof serverProcess.kill === 'function') {
       serverProcess.kill();
     }
