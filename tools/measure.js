@@ -144,7 +144,7 @@ const measure = async (
 
     logger.info(`${f(project)} Creating fresh build`);
 
-    await build(project, { fresh: true });
+    await build(project, { fresh: true, useBaseConfig: true });
 
     logger.process.fresh(`${f(project)} Starting application`);
 

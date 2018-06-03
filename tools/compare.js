@@ -114,24 +114,29 @@ const compare = async projects => {
       const splittedChart = chart.split('\n');
 
       const output = __raw.normalizedValues.map((value, index) => {
-        const label = value.label;
-        const timing = value.rawValue;
-        const diff =
-          timing === minTiming
-            ? 'fastest'
-            : '-' + (timing / minTiming * 100 - 100).toFixed(2) + '%';
+        try {
+          const label = value.label;
+          const timing = value.rawValue;
+          const diff =
+            timing === minTiming
+              ? 'fastest'
+              : '-' + (timing / minTiming * 100 - 100).toFixed(2) + '%';
 
-        const diffColor =
-          timing === minTiming
-            ? chalk.bold.green
-            : timing === maxTiming ? chalk.bold.red : _ => _;
+          const diffColor =
+            timing === minTiming
+              ? chalk.bold.green
+              : timing === maxTiming ? chalk.bold.red : _ => _;
 
-        return [
-          chalk.bold(label),
-          timing.toFixed(2),
-          diffColor(diff),
-          splittedChart[index],
-        ];
+          return [
+            chalk.bold(label),
+            timing.toFixed(2),
+            diffColor(diff),
+            splittedChart[index],
+          ];
+        } catch (error) {
+          logger.error(`Error while parsing metrics for ${value.label}`);
+          throw error;
+        }
       });
 
       logger.noformat(

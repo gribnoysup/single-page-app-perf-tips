@@ -18,7 +18,12 @@ const execAsync = promisify(exec);
 
 const build = async (
   project,
-  { stdio = 'ignore', failOnError = false, fresh = false } = {}
+  {
+    stdio = 'ignore',
+    failOnError = false,
+    fresh = false,
+    useBaseConfig = false,
+  } = {}
 ) => {
   if (project !== 'current') {
     await fetch(project);
@@ -77,7 +82,9 @@ const build = async (
 
     let configName;
 
-    if (webpackConfigFiles.length === 1) {
+    if (useBaseConfig === true && webpackConfigFiles.includes(baseConfigName)) {
+      configName = baseConfigName;
+    } else if (webpackConfigFiles.length === 1) {
       configName = webpackConfigFiles[0];
     } else {
       const len = webpackConfigFiles.length;
