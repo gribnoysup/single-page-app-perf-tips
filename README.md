@@ -1,3 +1,7 @@
+# This project is archived 📦
+
+When I started working on this, I couldn't find a good place on the web where all the examples with metrics would be gathered in accesible and searchable. Since then Google launched [web.dev](https://web.dev/) and it has a ton of resources dedicated to how to improve your website performance. I still think that having a playground to test your theory and have an interactive way to check how it really affects performance is valuable so I might came back to this project one day, but for now you should just check out [web.dev](https://web.dev/)
+
 # Single page application optimization tips
 
 This repository is a collection of optimization tips for single page
